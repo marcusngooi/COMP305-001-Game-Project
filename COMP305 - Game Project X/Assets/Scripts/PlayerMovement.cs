@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed, jumpForce;
+    [SerializeField] private float speed, jumpForce; // made it private but still accessible through inspecter 
 
-    private float timer = 0, jumpTime = 0.5f;
+    private float timer = 0, jumpTime = 0.4f;
     private Rigidbody2D _rigidBody;
 
     void Start()
@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
         Movement();
     }
 
-    void Movement()
+    private void Movement()
     {
         float horiz = Input.GetAxis("Horizontal");
 
@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && timer > jumpTime)
         {
+
             _rigidBody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             timer = 0;
         }
