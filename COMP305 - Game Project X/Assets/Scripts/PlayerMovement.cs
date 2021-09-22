@@ -4,34 +4,68 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float speed, jumpForce; // made it private but still accessible through inspecter 
+    public enum PlayerState
+    {        
+        isWalking,
+        isFalling,
+        isGrounded,
+        isStaggering
+    }    
 
-    private float timer = 0, jumpTime = 0.4f;
-    private Rigidbody2D _rigidBody;
+    [SerializeField] private float speed, jumpForce; // made it private but still accessible through inspecter 
+    [SerializeField] public PlayerState currentState;
+
+    private float timer = 0, jumpTime = 0.4f;    
+    private Rigidbody2D _rigidBody;      
 
     void Start()
     {
         _rigidBody = GetComponent<Rigidbody2D>();
+        currentState = PlayerState.isGrounded;
     }
 
-    
     void Update()
     {
-        Movement();
+        Movement();        
+    }
+
+    private void ChangeState(PlayerState newState)
+    {
+        if (currentState != newState)
+        {
+            currentState = newState;
+        }
     }
 
     private void Movement()
     {
-        float horiz = Input.GetAxis("Horizontal");
+        float horiz = Input.GetAxisRaw("Horizontal");
+        float vert = _rigidBody.velocity.y;
 
         transform.position += new Vector3(horiz, 0, 0) * Time.deltaTime * speed;
 
-        if (Input.GetButtonDown("Jump") && timer > jumpTime)
+        if (currentState == PlayerState.isGrounded && Input.GetButtonDown("Jump") && timer > jumpTime)
         {
-
             _rigidBody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+            ChangeState(PlayerState.isFalling);
             timer = 0;
         }
+
+        if (currentState != PlayerState.isGrounded && Input.GetButtonDown("Jump"))
+        {
+            _rigidBody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);            
+            Debug.Log("vert");
+            timer = 0;
+        }
+        
         timer += Time.deltaTime;
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Platform"))
+        {
+            ChangeState(PlayerState.isGrounded);
+        }        
     }
 }
