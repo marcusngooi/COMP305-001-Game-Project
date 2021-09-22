@@ -16,11 +16,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] public PlayerState currentState;
 
     private float timer = 0, jumpTime = 0.4f;    
-    private Rigidbody2D _rigidBody;      
+    private Rigidbody2D rb;      
 
     void Start()
     {
-        _rigidBody = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         currentState = PlayerState.isGrounded;
     }
 
@@ -40,20 +40,21 @@ public class PlayerMovement : MonoBehaviour
     private void Movement()
     {
         float horiz = Input.GetAxisRaw("Horizontal");
-        float vert = _rigidBody.velocity.y;
+        float vert = rb.velocity.y;
 
         transform.position += new Vector3(horiz, 0, 0) * Time.deltaTime * speed;
 
         if (currentState == PlayerState.isGrounded && Input.GetButtonDown("Jump") && timer > jumpTime)
         {
-            _rigidBody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+            rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             ChangeState(PlayerState.isFalling);
             timer = 0;
         }
 
         if (currentState != PlayerState.isGrounded && Input.GetButtonDown("Jump"))
         {
-            _rigidBody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);            
+            rb.velocity = new Vector2(0.0f, 0.0f);
+            rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);            
             Debug.Log("vert");
             timer = 0;
         }
