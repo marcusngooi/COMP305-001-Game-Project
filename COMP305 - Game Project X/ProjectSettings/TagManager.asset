@@ -42,3 +42,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: New Layer
+    uniqueID: 2729057283
+    locked: 0
+  - name: Background
+    uniqueID: 491369541
+    locked: 0
+  - name: Tile Background
+    uniqueID: 334692087
+    locked: 0
+  - name: Platforms
+    uniqueID: 3457406633
+    locked: 0
+  - name: Player
+    uniqueID: 3749669957
+    locked: 0
