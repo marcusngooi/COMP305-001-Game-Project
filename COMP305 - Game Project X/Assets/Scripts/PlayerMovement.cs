@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float speed, jumpForce; // made it private but still accessible through inspecter 
     [SerializeField] public PlayerState currentState;
+    [SerializeField] private float jumpCounter = 0;
 
     private float timer = 0, jumpTime = 0.4f;    
     private Rigidbody2D rb;      
@@ -61,6 +62,17 @@ public class PlayerMovement : MonoBehaviour
         
         timer += Time.deltaTime;
     }
+
+    // notes by Ikamjot Hundal:
+    /// <summary>
+    /// Logic:
+    /// If Jump Counter > 2 
+    /// then Start an Corountine aka Wait for Seconds
+    /// else 
+    /// Jump Counter < 2 
+    /// keep jumping
+    /// </summary>
+
 
     void OnCollisionEnter2D(Collision2D other)
     {
