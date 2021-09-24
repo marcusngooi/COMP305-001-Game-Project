@@ -845,8 +845,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.5
-  jumpForce: 3
+  jumpVelocity: 5
   currentState: 2
+  jumpCharges: 0
+  totalJumps: 5
+  jumpReady: 0
 --- !u!212 &1129238656
 SpriteRenderer:
   m_ObjectHideFlags: 0
