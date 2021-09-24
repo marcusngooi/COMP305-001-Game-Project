@@ -77,10 +77,11 @@ public class PlayerMovement : MonoBehaviour
         {
             if (jumpReady == false)
             {
-                yield return new WaitForSecondsRealtime(jumpCooldown);
                 jumpCharges -= 1;
+                PlayerUI.jumpsLeft = jumpCharges;
+                yield return new WaitForSecondsRealtime(jumpCooldown);
                 jumpReady = true;
-                PlayerUI.jumpsLeft -= 1;
+                
             }
             yield return null;
         }
