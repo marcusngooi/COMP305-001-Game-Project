@@ -14,7 +14,6 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float speed, jumpVelocity; // made it private but still accessible through inspecter 
     [SerializeField] public PlayerState currentState;
-    [SerializeField] private float jumpCounter = 0;
 
     private float jumpCooldown = 0.4f, fallMultiplier = 2f, lowJumpMultiplier = 3.5f;
     private Rigidbody2D rb;
