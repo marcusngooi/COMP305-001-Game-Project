@@ -80,6 +80,7 @@ public class PlayerMovement : MonoBehaviour
                 yield return new WaitForSecondsRealtime(jumpCooldown);
                 jumpCharges -= 1;
                 jumpReady = true;
+                PlayerUI.jumpsLeft -= 1;
             }
             yield return null;
         }
@@ -90,6 +91,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Platform"))
         {
+            PlayerUI.jumpsLeft = totalJumps;
             jumpCharges = totalJumps;
             ChangeState(PlayerState.isGrounded);
         }
