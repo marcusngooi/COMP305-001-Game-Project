@@ -88,18 +88,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
-
-    // notes by Ikamjot Hundal:
-    /// <summary>
-    /// Logic:
-    /// If Jump Counter > 2 
-    /// then Start an Corountine aka Wait for Seconds
-    /// else 
-    /// Jump Counter < 2 
-    /// keep jumping
-    /// </summary>
-
-
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Platform"))
