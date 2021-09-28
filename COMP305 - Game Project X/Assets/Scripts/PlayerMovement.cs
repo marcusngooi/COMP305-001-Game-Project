@@ -57,13 +57,14 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
-
+        //jump
         if (currentState == PlayerState.isGrounded && Input.GetButtonDown("Jump"))
         {
             rb.velocity = Vector2.up * jumpVelocity;
             ChangeState(PlayerState.isFalling);
 
         }
+        //double jump
         else if (currentState != PlayerState.isGrounded && Input.GetButtonDown("Jump") && jumpReady == true && jumpCharges > 0)
         {
             jumpReady = false;
