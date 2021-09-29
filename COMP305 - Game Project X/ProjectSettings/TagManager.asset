@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Platform
+  - Spike
+  - Enemy
+  - Projectile
   layers:
   - Default
   - TransparentFX
@@ -53,6 +56,12 @@ TagManager:
     locked: 0
   - name: Platforms
     uniqueID: 3457406633
+    locked: 0
+  - name: Obstacles
+    uniqueID: 2873178641
+    locked: 0
+  - name: Enemies
+    uniqueID: 3473626851
     locked: 0
   - name: Player
     uniqueID: 3749669957
