@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -156,6 +157,10 @@ public class PlayerMovement : MonoBehaviour
             {
                 animator.SetInteger("WallSlide", 1);
             }
+        }
+        if (other.gameObject.CompareTag("Spike"))
+        {
+            SceneManager.LoadScene("MainMenu");
         }
     }
     private void OnCollisionExit2D(Collision2D other)
