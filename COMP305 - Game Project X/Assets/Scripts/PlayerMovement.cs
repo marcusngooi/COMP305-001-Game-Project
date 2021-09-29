@@ -53,15 +53,17 @@ public class PlayerMovement : MonoBehaviour
         if (currentState == PlayerState.isFalling)
         {
             animator.SetBool("Falling", true);
-        } else
+        }
+        else
         {
             animator.SetBool("Falling", false);
         }
 
-        if(currentState == PlayerState.isJumping)
+        if (currentState == PlayerState.isJumping)
         {
             animator.SetBool("Jumping", true);
-        } else
+        }
+        else
         {
             animator.SetBool("Jumping", false);
         }
@@ -69,14 +71,16 @@ public class PlayerMovement : MonoBehaviour
         if (currentState == PlayerState.isGrounded)
         {
             animator.SetBool("Grounded", true);
-        }else
+        }
+        else
         {
             animator.SetBool("Grounded", false);
         }
         if (currentState == PlayerState.isDblJumping)
         {
             animator.SetBool("DblJumping", true);
-        } else
+        }
+        else
         {
             animator.SetBool("DblJumping", false);
         }
@@ -84,8 +88,7 @@ public class PlayerMovement : MonoBehaviour
     private void Movement()
     {
         float horiz = Input.GetAxisRaw("Horizontal");
-        transform.position += new Vector3(horiz, 0, 0) * Time.deltaTime * speed;
-
+        rb.velocity = new Vector2(horiz * speed * Time.fixedDeltaTime, rb.velocity.y);
         //Changes gravity so you fall faster (makes it feel less floaty when jumping)
         if (rb.velocity.y < 0)
         {
@@ -113,9 +116,9 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = Vector2.up * jumpVelocity;
         }
         //speed cap
-        if(rb.velocity.y < -maxSpeed)
+        if (rb.velocity.y < -maxSpeed)
         {
-            rb.velocity = new Vector2(0, -maxSpeed);
+            rb.velocity = new Vector2(rb.velocity.x, -maxSpeed);
         }
     }
     private IEnumerator DoubleJumpCooldown(float jumpCooldown)
@@ -128,13 +131,13 @@ public class PlayerMovement : MonoBehaviour
                 PlayerUI.jumpsLeft = jumpCharges;
                 yield return new WaitForSecondsRealtime(jumpCooldown);
                 jumpReady = true;
-                
+
             }
             yield return null;
         }
 
     }
-    void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Platform"))
         {
@@ -142,13 +145,14 @@ public class PlayerMovement : MonoBehaviour
             jumpCharges = totalJumps;
             ChangeState(PlayerState.isGrounded);
         }
-        if(other.gameObject.CompareTag("Wall"))
+        if (other.gameObject.CompareTag("Wall"))
         {
             string name = other.gameObject.name;
-            if(name.Equals("WallLeft"))
+            if (name.Equals("WallLeft"))
             {
                 animator.SetInteger("WallSlide", -1);
-            } else
+            }
+            else
             {
                 animator.SetInteger("WallSlide", 1);
             }
@@ -156,7 +160,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void OnCollisionExit2D(Collision2D other)
     {
-        if(other.gameObject.CompareTag("Wall"))
+        if (other.gameObject.CompareTag("Wall"))
         {
             animator.SetInteger("WallSlide", 0);
         }
