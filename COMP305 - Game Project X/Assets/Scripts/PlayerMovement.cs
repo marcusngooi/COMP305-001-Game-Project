@@ -142,5 +142,23 @@ public class PlayerMovement : MonoBehaviour
             jumpCharges = totalJumps;
             ChangeState(PlayerState.isGrounded);
         }
+        if(other.gameObject.CompareTag("Wall"))
+        {
+            string name = other.gameObject.name;
+            if(name.Equals("WallLeft"))
+            {
+                animator.SetInteger("WallSlide", -1);
+            } else
+            {
+                animator.SetInteger("WallSlide", 1);
+            }
+        }
+    }
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if(other.gameObject.CompareTag("Wall"))
+        {
+            animator.SetInteger("WallSlide", 0);
+        }
     }
 }
