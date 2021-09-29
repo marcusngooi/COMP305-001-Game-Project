@@ -578,7 +578,7 @@ AnimatorStateMachine:
     m_Position: {x: -230, y: 350, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3693579938164343436}
-    m_Position: {x: 160, y: 50, z: 0}
+    m_Position: {x: 100, y: -20, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8642839749860652104}
     m_Position: {x: 10, y: 120, z: 0}
@@ -674,12 +674,15 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
+<<<<<<< HEAD
   - m_Name: Death
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
+=======
+>>>>>>> main
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
