@@ -6,7 +6,9 @@ public class PlayerMovement : MonoBehaviour
 {
     public enum PlayerState
     {
-        isWalking,
+        isRunning,
+        isJumping,
+        isDblJumping,
         isFalling,
         isGrounded,
         isStaggering
@@ -15,10 +17,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed, jumpVelocity; // made it private but still accessible through inspecter 
     [SerializeField] public PlayerState currentState;
 
-    private float jumpCooldown = 0.4f, fallMultiplier = 2f, lowJumpMultiplier = 3.5f;
+    private float jumpCooldown = 0.2f, fallMultiplier = 2f, lowJumpMultiplier = 3.5f;
     private Rigidbody2D rb;
-    public int jumpCharges, totalJumps = 5;
+    public int jumpCharges, totalJumps = 3, maxSpeed = 10;
     public bool jumpReady;
+    public Animator animator;
 
     void Start()
     {
@@ -26,12 +29,13 @@ public class PlayerMovement : MonoBehaviour
         currentState = PlayerState.isGrounded;
         jumpCharges = totalJumps;
         jumpReady = true;
-        StartCoroutine(DoubleJump(jumpCooldown));
+        StartCoroutine(DoubleJumpCooldown(jumpCooldown));
     }
 
     void Update()
     {
         Movement();
+        Animation();
     }
 
     private void ChangeState(PlayerState newState)
@@ -42,6 +46,41 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void Animation()
+    {
+        int horizontal = (int)Input.GetAxisRaw("Horizontal");
+        animator.SetInteger("Speed", horizontal);
+        if (currentState == PlayerState.isFalling)
+        {
+            animator.SetBool("Falling", true);
+        } else
+        {
+            animator.SetBool("Falling", false);
+        }
+
+        if(currentState == PlayerState.isJumping)
+        {
+            animator.SetBool("Jumping", true);
+        } else
+        {
+            animator.SetBool("Jumping", false);
+        }
+
+        if (currentState == PlayerState.isGrounded)
+        {
+            animator.SetBool("Grounded", true);
+        }else
+        {
+            animator.SetBool("Grounded", false);
+        }
+        if (currentState == PlayerState.isDblJumping)
+        {
+            animator.SetBool("DblJumping", true);
+        } else
+        {
+            animator.SetBool("DblJumping", false);
+        }
+    }
     private void Movement()
     {
         float horiz = Input.GetAxisRaw("Horizontal");
@@ -51,6 +90,7 @@ public class PlayerMovement : MonoBehaviour
         if (rb.velocity.y < 0)
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+            ChangeState(PlayerState.isFalling);
         }
         //if jump is not held more gravity is applied causing a shorter jump (tap jump for less height, hold for more height)
         else if (rb.velocity.y > 0 && !Input.GetButton("Jump"))
@@ -61,18 +101,24 @@ public class PlayerMovement : MonoBehaviour
         if (currentState == PlayerState.isGrounded && Input.GetButtonDown("Jump"))
         {
             rb.velocity = Vector2.up * jumpVelocity;
-            ChangeState(PlayerState.isFalling);
+            ChangeState(PlayerState.isJumping);
 
         }
         //double jump
-        else if (currentState != PlayerState.isGrounded && Input.GetButtonDown("Jump") && jumpReady == true && jumpCharges > 0)
+        else if ((currentState == PlayerState.isFalling || currentState == PlayerState.isJumping) && Input.GetButtonDown("Jump") && jumpReady == true && jumpCharges > 0)
         {
+            ChangeState(PlayerState.isDblJumping);
             jumpReady = false;
             rb.velocity = new Vector2(0.0f, 0.0f);
             rb.velocity = Vector2.up * jumpVelocity;
         }
+        //speed cap
+        if(rb.velocity.y < -maxSpeed)
+        {
+            rb.velocity = new Vector2(0, -maxSpeed);
+        }
     }
-    private IEnumerator DoubleJump(float jumpCooldown)
+    private IEnumerator DoubleJumpCooldown(float jumpCooldown)
     {
         while (true)
         {
