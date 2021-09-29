@@ -21,8 +21,9 @@ public class PlayerMovement : MonoBehaviour
     private float jumpCooldown = 0.2f, fallMultiplier = 2f, lowJumpMultiplier = 3.5f;
     private Rigidbody2D rb;
     public int jumpCharges, totalJumps = 3, maxSpeed = 10;
-    public bool jumpReady;
+    public bool jumpReady, godMode;
     public Animator animator;
+    public BoxCollider2D playerFeet, playerBody;
 
     void Start()
     {
@@ -121,6 +122,10 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, -maxSpeed);
         }
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            godMode = !godMode;
+        }
     }
     private IEnumerator DoubleJumpCooldown(float jumpCooldown)
     {
@@ -158,13 +163,15 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetInteger("WallSlide", 1);
             }
         }
-        if (other.gameObject.CompareTag("Spike"))
+        if (other.gameObject.CompareTag("Spike") && godMode == false)
         {
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            this.transform.position = new Vector3(-6.34f, -0.38f, 0f);
         }
-        if(other.gameObject.CompareTag("Enemy"))
+        if(other.gameObject.CompareTag("Enemy") && other.otherCollider == playerBody && godMode == false)
         {
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            this.transform.position = new Vector3(-6.34f, -0.38f, 0f);
         }
     }
     private void OnTriggerEnter2D(Collider2D other)
