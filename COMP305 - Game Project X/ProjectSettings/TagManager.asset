@@ -9,6 +9,8 @@ TagManager:
   - Enemy
   - Projectile
   - Wall
+  - FinishLine
+  - Load
   layers:
   - Default
   - TransparentFX
