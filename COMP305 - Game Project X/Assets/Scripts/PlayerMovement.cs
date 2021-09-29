@@ -162,9 +162,26 @@ public class PlayerMovement : MonoBehaviour
         {
             SceneManager.LoadScene("MainMenu");
         }
+        if(other.gameObject.CompareTag("Enemy"))
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(other.gameObject);
+            ChangeState(PlayerState.isDblJumping);
+            rb.velocity = new Vector2(0.0f, 0.0f);
+            rb.velocity = Vector2.up * jumpVelocity;
+            jumpCharges = totalJumps;
+            PlayerUI.jumpsLeft = jumpCharges;
+        }
     }
     private void OnCollisionExit2D(Collision2D other)
     {
+        //once player leaves the wall collider he will no longer be sliding
         if (other.gameObject.CompareTag("Wall"))
         {
             animator.SetInteger("WallSlide", 0);
