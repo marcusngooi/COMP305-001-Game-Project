@@ -179,7 +179,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             Destroy(other.gameObject);
-            ChangeState(PlayerState.isDblJumping);
+            ChangeState(PlayerState.isJumping);
             rb.velocity = new Vector2(0.0f, 0.0f);
             rb.velocity = Vector2.up * jumpVelocity;
             jumpCharges = totalJumps;
