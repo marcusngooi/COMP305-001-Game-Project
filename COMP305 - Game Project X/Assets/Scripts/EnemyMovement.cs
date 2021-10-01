@@ -8,13 +8,20 @@ public class EnemyMovement : MonoBehaviour
     
     public float moveSpeed;
     public int target;
+    public Animator animator;
+    public bool isAlive;
 
-    
 
+    private void Start()
+    {
+        isAlive = true;
+    }
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, waypoints[target].position, moveSpeed * Time.deltaTime);
-
+        if(isAlive)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, waypoints[target].position, moveSpeed * Time.deltaTime);
+        }
     }
 
     private void FixedUpdate()
@@ -30,5 +37,23 @@ public class EnemyMovement : MonoBehaviour
                 target += 1;
             }
         }
+    }
+
+    public void Death()
+    {
+        isAlive = false;
+        foreach (Collider2D c in GetComponents<Collider2D>())
+        {
+            c.enabled = false;
+     }
+        StartCoroutine(DeathAnimation());
+        
+    }
+
+    IEnumerator DeathAnimation()
+    {
+        animator.SetBool("Alive", false);
+        yield return new WaitForSeconds(1f);
+        Destroy(this.gameObject);
     }
 }
