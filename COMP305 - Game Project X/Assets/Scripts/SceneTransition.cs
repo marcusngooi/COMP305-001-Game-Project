@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,22 +12,31 @@ public class SceneTransition : MonoBehaviour
 
     [SerializeField] private float transitionTime = 2f;
 
-    [SerializeField] private Rigidbody2D player;
-
     // called during the trigger 
-
-    void OnTriggerStay2D(Collider2D other)
+     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             LoadNextLevel();
-            Debug.Log("hello");
+        }
+
+        else if (other.gameObject.CompareTag("FinishLine"))
+        {
+            LoadMainMenu();
         }
     }
-    public void LoadNextLevel()
-     {
-         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
-     } 
+
+    private void LoadNextLevel()
+    { 
+        // take the current scene and go on next scene based on build's scene order
+       StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1)); 
+    } 
+
+    // for main menu
+    private void LoadMainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 
     IEnumerator LoadLevel(int levelindex)
     {
@@ -38,7 +48,4 @@ public class SceneTransition : MonoBehaviour
         // load scene
         SceneManager.LoadScene(levelindex);
     }
-
-
-
 }
