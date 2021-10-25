@@ -137,7 +137,6 @@ public class PlayerMovement : MonoBehaviour
                 PlayerUI.jumpsLeft = jumpCharges;
                 yield return new WaitForSecondsRealtime(jumpCooldown);
                 jumpReady = true;
-
             }
             yield return null;
         }
