@@ -24,10 +24,12 @@ public class PlayerMovement : MonoBehaviour
     public bool jumpReady, godMode;
     public Animator animator;
     public BoxCollider2D playerFeet, playerBody;
+    public SpriteRenderer spriteRenderer;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         currentState = PlayerState.isGrounded;
         jumpCharges = totalJumps;
         jumpReady = true;
@@ -50,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Animation()
     {
-        int horizontal = (int)Input.GetAxisRaw("Horizontal");
+        int horizontal = Mathf.Abs((int)Input.GetAxisRaw("Horizontal"));
         animator.SetInteger("Speed", horizontal);
         if (currentState == PlayerState.isFalling)
         {
@@ -126,6 +128,13 @@ public class PlayerMovement : MonoBehaviour
         {
             godMode = !godMode;
         }
+        if(horiz > 0)
+        {
+            spriteRenderer.flipX = false;
+        } else if(horiz < 0)
+        {
+            spriteRenderer.flipX = true;
+        }
     }
     private IEnumerator DoubleJumpCooldown(float jumpCooldown)
     {
@@ -150,18 +159,6 @@ public class PlayerMovement : MonoBehaviour
             jumpCharges = totalJumps;
             ChangeState(PlayerState.isGrounded);
         }
-        if (other.gameObject.CompareTag("Wall"))
-        {
-            string name = other.gameObject.name;
-            if (name.Equals("WallLeft"))
-            {
-                animator.SetInteger("WallSlide", -1);
-            }
-            else
-            {
-                animator.SetInteger("WallSlide", 1);
-            }
-        }
         if (other.gameObject.CompareTag("Spike") && godMode == false)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -184,14 +181,6 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = Vector2.up * jumpVelocity;
             jumpCharges = totalJumps;
             PlayerUI.jumpsLeft = jumpCharges;
-        }
-    }
-    private void OnCollisionExit2D(Collision2D other)
-    {
-        //once player leaves the wall collider he will no longer be sliding
-        if (other.gameObject.CompareTag("Wall"))
-        {
-            animator.SetInteger("WallSlide", 0);
         }
     }
 }
