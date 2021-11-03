@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float speed, jumpVelocity; // made it private but still accessible through inspecter 
     [SerializeField] public PlayerState currentState;
+    [SerializeField] GameObject gameController;
 
     private float jumpCooldown = 0.2f, fallMultiplier = 2f, lowJumpMultiplier = 3.5f;
     private Rigidbody2D rb;
@@ -181,6 +182,12 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = Vector2.up * jumpVelocity;
             jumpCharges = totalJumps;
             PlayerUI.jumpsLeft = jumpCharges;
+            gameController.GetComponent<GameController>().enemyKC += 1;
+        }
+        if (other.gameObject.CompareTag("End"))
+        {
+            gameController.GetComponent<GameController>().calculateScore();
+            SceneManager.LoadScene("ScoreScreen");
         }
     }
 }

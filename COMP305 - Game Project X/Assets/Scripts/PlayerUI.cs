@@ -9,7 +9,7 @@ public class PlayerUI : MonoBehaviour
 {
     public static int jumpsLeft = 5;
 
-    [SerializeField] float time = 0;
+    [SerializeField] public float time = 0;
     private bool timeRunning = false;
 
     public TextMeshProUGUI jumpsText;
@@ -18,7 +18,6 @@ public class PlayerUI : MonoBehaviour
 
     void Start()
     {
-        jumpsText = GetComponent<TextMeshProUGUI>();
         time = 0;
         timeRunning = true;
         
