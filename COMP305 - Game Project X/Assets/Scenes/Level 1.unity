@@ -2245,6 +2245,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7519159402787911966, guid: 501accafdc4be61428e81628309c0c27, type: 3}
+      propertyPath: UI
+      value: 
+      objectReference: {fileID: 1746066397}
     - target: {fileID: 7519159402787911967, guid: 501accafdc4be61428e81628309c0c27, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -14669,6 +14673,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1746066397 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4725075780517994166, guid: 7110f40d19610904aa1e2e55b30f163e, type: 3}
+  m_PrefabInstance: {fileID: 6807539}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1746066398 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4725075780517994170, guid: 7110f40d19610904aa1e2e55b30f163e, type: 3}
