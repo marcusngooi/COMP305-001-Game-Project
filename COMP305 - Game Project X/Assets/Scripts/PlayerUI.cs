@@ -9,7 +9,7 @@ public class PlayerUI : MonoBehaviour
 {
     public static int jumpsLeft = 5;
 
-    [SerializeField] float timeRemaining = 50;
+    [SerializeField] float time = 0;
     private bool timeRunning = false;
 
     public TextMeshProUGUI jumpsText;
@@ -19,7 +19,7 @@ public class PlayerUI : MonoBehaviour
     void Start()
     {
         jumpsText = GetComponent<TextMeshProUGUI>();
-
+        time = 0;
         timeRunning = true;
         
 
@@ -28,7 +28,7 @@ public class PlayerUI : MonoBehaviour
     void Update()
     {
         jumpsText.text = "Jumps Left: " + jumpsLeft;
-        timerText.text = "Time: " + timeRemaining;
+        timerText.text = "Time: " + time;
 
         TimerFunction();
     }
@@ -37,17 +37,8 @@ public class PlayerUI : MonoBehaviour
     {
         if (timeRunning)
         {
-            if (timeRemaining > 0)
-            {
-                timeRemaining -= Time.deltaTime;
-            }
-            else
-            {
-                Scene scene = SceneManager.GetActiveScene();
-                timeRemaining = 0;
-                timeRunning = false;
-
-            }
+                time += Time.deltaTime;
+                time = Mathf.Round(time *100) / 100;
         }
     }
 
