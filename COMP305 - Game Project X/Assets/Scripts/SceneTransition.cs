@@ -22,7 +22,7 @@ public class SceneTransition : MonoBehaviour
 
         else if (other.gameObject.CompareTag("FinishLine"))
         {
-            LoadMainMenu();
+            LoadNextLevel();
         }
     }
 
