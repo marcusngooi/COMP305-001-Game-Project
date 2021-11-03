@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ScoreUI : MonoBehaviour
 {
@@ -12,8 +13,9 @@ public class ScoreUI : MonoBehaviour
     void Start()
     {
         killedText.text = PlayerPrefs.GetInt("enemyKC").ToString();
-        timeText.text = (Mathf.Round(PlayerPrefs.GetFloat("time") * 100) / 100).ToString();
+        timeText.text = PlayerPrefs.GetFloat("time").ToString("0.00");
         scoreText.text = PlayerPrefs.GetInt("score").ToString();
+
     }
 
     // Update is called once per frame

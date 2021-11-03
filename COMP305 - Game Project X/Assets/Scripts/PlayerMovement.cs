@@ -184,10 +184,9 @@ public class PlayerMovement : MonoBehaviour
             PlayerUI.jumpsLeft = jumpCharges;
             gameController.GetComponent<GameController>().enemyKC += 1;
         }
-        if (other.gameObject.CompareTag("End"))
+        if (other.gameObject.CompareTag("FinishLine"))
         {
             gameController.GetComponent<GameController>().calculateScore();
-            SceneManager.LoadScene("ScoreScreen");
         }
     }
 }

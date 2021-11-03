@@ -16,7 +16,8 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     public void calculateScore()
     {
-        float timeD = UI.GetComponent<PlayerUI>().time/8;
+        time = UI.GetComponent<PlayerUI>().time;
+        float timeD = time / 8;
 
         float scoreMultiplier = timeMultiplier - (timeMultiplier * timeD / (timeMultiplier + timeD));
 

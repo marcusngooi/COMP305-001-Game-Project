@@ -2182,7 +2182,7 @@ GameObject:
   - component: {fileID: 430906291}
   m_Layer: 0
   m_Name: LevelEnd
-  m_TagString: End
+  m_TagString: FinishLine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

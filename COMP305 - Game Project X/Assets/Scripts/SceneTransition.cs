@@ -17,19 +17,25 @@ public class SceneTransition : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            LoadNextLevel();
+            LoadScoreScreen();
         }
 
         else if (other.gameObject.CompareTag("FinishLine"))
         {
-            LoadNextLevel();
+            LoadScoreScreen();
         }
     }
 
-    private void LoadNextLevel()
-    { 
+    public void LoadScoreScreen()
+    {
+        PlayerPrefs.SetInt("scene", SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("ScoreScreen");
+    }
+    public void LoadNextLevel()
+    {
         // take the current scene and go on next scene based on build's scene order
-       StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1)); 
+       
+        StartCoroutine(LoadLevel(PlayerPrefs.GetInt("scene")+1)); 
     } 
 
     // for main menu
