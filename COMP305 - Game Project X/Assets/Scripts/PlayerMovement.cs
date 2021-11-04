@@ -12,7 +12,8 @@ public class PlayerMovement : MonoBehaviour
         isDblJumping,
         isFalling,
         isGrounded,
-        isStaggering
+        isStaggering,
+        isDead
     }
 
     [SerializeField] private float speed, jumpVelocity; // made it private but still accessible through inspecter 
@@ -55,6 +56,11 @@ public class PlayerMovement : MonoBehaviour
     {
         int horizontal = Mathf.Abs((int)Input.GetAxisRaw("Horizontal"));
         animator.SetInteger("Speed", horizontal);
+        if (currentState == PlayerState.isDead)
+        {
+            animator.SetTrigger("Death");
+            StartCoroutine(PlayerDeath());
+        }
         if (currentState == PlayerState.isFalling)
         {
             animator.SetBool("Falling", true);
@@ -89,6 +95,7 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("DblJumping", false);
         }
+        
     }
     private void Movement()
     {
@@ -160,20 +167,13 @@ public class PlayerMovement : MonoBehaviour
             jumpCharges = totalJumps;
             ChangeState(PlayerState.isGrounded);
         }
-        if (other.gameObject.CompareTag("Spike") && godMode == false)
+        if ((other.gameObject.CompareTag("Spike") || other.gameObject.CompareTag("Laser")) && godMode == false)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            this.transform.position = new Vector3(-6.34f, -0.38f, 0f);
+            StartCoroutine(PlayerDeath());
         }
         if(other.gameObject.CompareTag("Enemy") && other.otherCollider == playerBody && godMode == false)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            this.transform.position = new Vector3(-6.34f, -0.38f, 0f);
-        }
-        if (other.gameObject.CompareTag("Laser") && godMode == false)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            this.transform.position = new Vector3(-6.34f, -0.38f, 0f);
+            StartCoroutine(PlayerDeath());
         }
     }
     private void OnTriggerEnter2D(Collider2D other)
@@ -193,5 +193,13 @@ public class PlayerMovement : MonoBehaviour
         {
             gameController.GetComponent<GameController>().calculateScore();
         }
+    }
+
+    private IEnumerator PlayerDeath()
+    {
+        animator.SetTrigger("Death");
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        yield return new WaitForSeconds(0.5f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
