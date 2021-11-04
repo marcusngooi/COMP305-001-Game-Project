@@ -534,10 +534,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 362749460774231106, guid: 90a732693d52bca4fa6951cae5a7d427, type: 3}
-      propertyPath: transitionTime
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7238381721704398180, guid: 90a732693d52bca4fa6951cae5a7d427, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -587,6 +583,10 @@ PrefabInstance:
       value: SceneLoader
       objectReference: {fileID: 0}
     - target: {fileID: 7238381721704398183, guid: 90a732693d52bca4fa6951cae5a7d427, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7238381722354211725, guid: 90a732693d52bca4fa6951cae5a7d427, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -962,6 +962,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1157079058}
   m_CullTransparentMesh: 1
+--- !u!114 &1246643686 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 362749460774231106, guid: 90a732693d52bca4fa6951cae5a7d427, type: 3}
+  m_PrefabInstance: {fileID: 714470355}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dd8a002b537879458dc9387932c071a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1266087225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,9 +1122,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 360302934}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: PlayGame
+      - m_Target: {fileID: 1246643686}
+        m_TargetAssemblyTypeName: SceneTransition, Assembly-CSharp
+        m_MethodName: LoadNextLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

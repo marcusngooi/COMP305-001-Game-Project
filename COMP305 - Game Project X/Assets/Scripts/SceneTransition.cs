@@ -49,7 +49,7 @@ public class SceneTransition : MonoBehaviour
         // play the animation
         transition.SetTrigger("Start");
         // wait
-        yield return new WaitForSeconds(transitionTime);
+        yield return new WaitForSecondsRealtime(transitionTime);
 
         // load scene
         SceneManager.LoadScene(levelindex);

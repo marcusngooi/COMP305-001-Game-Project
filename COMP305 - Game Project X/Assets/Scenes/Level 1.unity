@@ -513,14 +513,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 362749460774231106, guid: 90a732693d52bca4fa6951cae5a7d427, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1387035109}
-    - target: {fileID: 362749460774231106, guid: 90a732693d52bca4fa6951cae5a7d427, type: 3}
-      propertyPath: transitionTime
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 7238381721704398180, guid: 90a732693d52bca4fa6951cae5a7d427, type: 3}
       propertyPath: m_RootOrder
       value: 2
