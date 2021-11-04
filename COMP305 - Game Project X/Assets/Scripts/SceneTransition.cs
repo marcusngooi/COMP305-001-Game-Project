@@ -39,7 +39,7 @@ public class SceneTransition : MonoBehaviour
     } 
 
     // for main menu
-    private void LoadMainMenu()
+    public void LoadMainMenu()
     {
         SceneManager.LoadScene(0);
     }
