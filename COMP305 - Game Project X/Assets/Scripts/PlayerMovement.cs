@@ -199,7 +199,7 @@ public class PlayerMovement : MonoBehaviour
     {
         animator.SetTrigger("Death");
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.9f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
