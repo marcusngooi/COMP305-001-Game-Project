@@ -154,7 +154,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Platform"))
+        if (other.gameObject.CompareTag("Platform") && other.otherCollider == playerFeet)
         {
             PlayerUI.jumpsLeft = totalJumps;
             jumpCharges = totalJumps;
@@ -166,6 +166,11 @@ public class PlayerMovement : MonoBehaviour
             this.transform.position = new Vector3(-6.34f, -0.38f, 0f);
         }
         if(other.gameObject.CompareTag("Enemy") && other.otherCollider == playerBody && godMode == false)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            this.transform.position = new Vector3(-6.34f, -0.38f, 0f);
+        }
+        if (other.gameObject.CompareTag("Laser") && godMode == false)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             this.transform.position = new Vector3(-6.34f, -0.38f, 0f);
