@@ -1724,6 +1724,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cd5036579e2862419b2e4fb8ad4033a, type: 3}
+--- !u!1 &525599194 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7519159402787911969, guid: 501accafdc4be61428e81628309c0c27, type: 3}
+  m_PrefabInstance: {fileID: 1553163561}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &533521524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5980,7 +5985,7 @@ MonoBehaviour:
   speed: 225
   jumpVelocity: 5
   currentState: 2
-  gameController: {fileID: 0}
+  gameController: {fileID: 525599194}
   jumpCharges: 0
   totalJumps: 3
   maxSpeed: 12

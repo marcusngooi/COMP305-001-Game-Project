@@ -128,4 +128,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laser: {fileID: 2008459959179127780, guid: 71e2563f515844142bbdbbe0729f5d2d, type: 3}
   laserSpawn: {fileID: 3170955620584255025}
-  fireRate: 1
+  fireRate: 2
