@@ -901,17 +901,6 @@ MonoBehaviour:
   spritePerFrame: 6
   loop: 1
   destroyOnEnd: 0
---- !u!114 &904052477 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 362749460774231106, guid: 90a732693d52bca4fa6951cae5a7d427, type: 3}
-  m_PrefabInstance: {fileID: 1030694783}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dd8a002b537879458dc9387932c071a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &928886809
 GameObject:
   m_ObjectHideFlags: 0
@@ -2628,9 +2617,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 904052477}
-        m_TargetAssemblyTypeName: SceneTransition, Assembly-CSharp
-        m_MethodName: LoadNextLevel
+      - m_Target: {fileID: 1085997504}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: PlayGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
