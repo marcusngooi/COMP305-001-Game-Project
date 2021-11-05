@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float jumpCooldown = 0.2f, fallMultiplier = 2f, lowJumpMultiplier = 3.5f;
     private Rigidbody2D rb;
-    public int jumpCharges, totalJumps = 3, maxSpeed = 10;
+    public int jumpCharges, totalJumps = 3, maxSpeed = 8;
     public bool jumpReady, godMode;
     public Animator animator;
     public BoxCollider2D playerFeet, playerBody;
