@@ -18,7 +18,7 @@ public class ScrollingBackground : MonoBehaviour
     void LateUpdate()
     {
         Vector3 deltaMovement = cameraTransform.position - lastCameraPosition;
-        transform.Translate(deltaMovement * Time.deltaTime * 100f);
+        transform.position += deltaMovement;
         lastCameraPosition = cameraTransform.position;
     }
 }
