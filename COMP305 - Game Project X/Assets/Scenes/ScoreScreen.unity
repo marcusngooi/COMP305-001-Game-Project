@@ -475,7 +475,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 799553984}
         m_TargetAssemblyTypeName: SceneTransition, Assembly-CSharp
-        m_MethodName: LoadMainMenu
+        m_MethodName: LoadGameOver
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -780,7 +780,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Main menu
+  m_text: Give up
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8c54a989cb4ef764bab1e151d1ed7943, type: 2}
   m_sharedMaterial: {fileID: -5014304043783038488, guid: 8c54a989cb4ef764bab1e151d1ed7943, type: 2}

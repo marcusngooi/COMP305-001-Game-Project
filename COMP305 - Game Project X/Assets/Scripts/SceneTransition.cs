@@ -44,6 +44,12 @@ public class SceneTransition : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public void LoadGameOver()
+    {
+        PlayerPrefs.SetInt("scene", 0);
+        SceneManager.LoadScene("Game_Over");
+    }
+
     IEnumerator LoadLevel(int levelindex)
     {
         // play the animation

@@ -170,12 +170,12 @@ public class PlayerMovement : MonoBehaviour
         if ((other.gameObject.CompareTag("Spike") || other.gameObject.CompareTag("Laser")) && godMode == false)
         {
             StartCoroutine(PlayerDeath());
-          // gameController.GetComponent<GameController>().calculateScore();
+            gameController.GetComponent<GameController>().calculateScore();
         }
         if(other.gameObject.CompareTag("Enemy") && other.otherCollider == playerBody && godMode == false)
         {
             StartCoroutine(PlayerDeath());
-          //gameController.GetComponent<GameController>().calculateScore();
+            gameController.GetComponent<GameController>().calculateScore();
         }
     }
     private void OnTriggerEnter2D(Collider2D other)
@@ -202,7 +202,6 @@ public class PlayerMovement : MonoBehaviour
         animator.SetTrigger("Death");
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
         yield return new WaitForSeconds(0.9f);
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        SceneManager.LoadScene("Game_Over");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
