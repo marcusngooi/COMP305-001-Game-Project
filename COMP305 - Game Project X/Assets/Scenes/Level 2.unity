@@ -923,7 +923,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 334692087
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!224 &218611598
@@ -2636,7 +2636,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -837560663
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -8514,7 +8514,7 @@ GameObject:
   - component: {fileID: 1678904260}
   - component: {fileID: 1678904259}
   m_Layer: 0
-  m_Name: Tilemap
+  m_Name: LevelTilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8572,7 +8572,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 334692087
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -21914,7 +21914,7 @@ GameObject:
   - component: {fileID: 1964698876}
   - component: {fileID: 1964698875}
   m_Layer: 0
-  m_Name: Background
+  m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23053,7 +23053,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4616549820528892120}
   m_Layer: 0
-  m_Name: Cameras
+  m_Name: CameraRig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23121,7 +23121,7 @@ GameObject:
   - component: {fileID: 4616549821540618565}
   - component: {fileID: 1977855741}
   m_Layer: 0
-  m_Name: CM vcam1
+  m_Name: PlayCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

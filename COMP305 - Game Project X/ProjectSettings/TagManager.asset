@@ -49,9 +49,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: New Layer
-    uniqueID: 2729057283
-    locked: 0
   - name: Background
     uniqueID: 491369541
     locked: 0
@@ -63,6 +60,9 @@ TagManager:
     locked: 0
   - name: Obstacles
     uniqueID: 2873178641
+    locked: 0
+  - name: World Space UI
+    uniqueID: 2729057283
     locked: 0
   - name: Enemies
     uniqueID: 3473626851
