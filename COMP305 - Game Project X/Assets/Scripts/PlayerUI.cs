@@ -10,7 +10,7 @@ public class PlayerUI : MonoBehaviour
     public static int jumpsLeft = 5;
 
     [SerializeField] public float time = 0;
-    private bool timeRunning = false;
+    private bool timeRunning = true;
 
     public TextMeshProUGUI jumpsText;
     public TextMeshProUGUI timerText;
@@ -19,12 +19,9 @@ public class PlayerUI : MonoBehaviour
     void Start()
     {
         time = 0;
-        timeRunning = true;
-        
-
     }
 
-    void Update()
+    void FixedUpdate()
     {
         jumpsText.text = "Jumps Left: " + jumpsLeft;
         timerText.text = "Time: " + time;
@@ -36,7 +33,7 @@ public class PlayerUI : MonoBehaviour
     {
         if (timeRunning)
         {
-                time += Time.deltaTime;
+                time += Time.fixedDeltaTime;
                 time = Mathf.Round(time *100) / 100;
         }
     }
