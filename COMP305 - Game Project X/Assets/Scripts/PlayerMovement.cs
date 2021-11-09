@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float speed, jumpVelocity; // made it private but still accessible through inspecter 
     [SerializeField] public PlayerState currentState;
-    [SerializeField] GameObject gameController;
+    [SerializeField] GameObject gameController,jump;
 
     private float jumpCooldown = 0.2f, fallMultiplier = 2f, lowJumpMultiplier = 3.5f;
     private Rigidbody2D rb;
@@ -151,7 +151,7 @@ public class PlayerMovement : MonoBehaviour
             if (jumpReady == false)
             {
                 jumpCharges -= 1;
-                PlayerUI.jumpsLeft = jumpCharges;
+                jump.GetComponent<Jumps>().jump -= 1;
                 yield return new WaitForSecondsRealtime(jumpCooldown);
                 jumpReady = true;
             }
@@ -163,7 +163,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Platform") && other.otherCollider == playerFeet)
         {
-            PlayerUI.jumpsLeft = totalJumps;
+            jump.GetComponent<Jumps>().jump = totalJumps;
             jumpCharges = totalJumps;
             ChangeState(PlayerState.isGrounded);
         }
@@ -188,7 +188,7 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(0.0f, 0.0f);
             rb.velocity = Vector2.up * jumpVelocity;
             jumpCharges = totalJumps;
-            PlayerUI.jumpsLeft = jumpCharges;
+            jump.GetComponent<Jumps>().jump = totalJumps;
             gameController.GetComponent<GameController>().enemyKC += 1;
         }
         if (other.gameObject.CompareTag("FinishLine"))
