@@ -49,7 +49,10 @@ public class SceneTransition : MonoBehaviour
         PlayerPrefs.SetInt("scene", 0);
         SceneManager.LoadScene("Game_Over");
     }
-
+    public void PlayGame()
+    {
+        StartCoroutine(LoadLevel(1));
+    }
     IEnumerator LoadLevel(int levelindex)
     {
         // play the animation
