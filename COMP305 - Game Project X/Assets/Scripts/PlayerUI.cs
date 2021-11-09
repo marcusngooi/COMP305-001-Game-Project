@@ -7,14 +7,10 @@ using UnityEngine.SceneManagement;
 
 public class PlayerUI : MonoBehaviour
 {
-    public static int jumpsLeft = 5;
-
     [SerializeField] public float time = 0;
     private bool timeRunning = true;
 
-    public TextMeshProUGUI jumpsText;
     public TextMeshProUGUI timerText;
-
 
     void Start()
     {
@@ -23,7 +19,6 @@ public class PlayerUI : MonoBehaviour
 
     void FixedUpdate()
     {
-        jumpsText.text = "Jumps Left: " + jumpsLeft;
         timerText.text = "Time: " + time;
 
         TimerFunction();
