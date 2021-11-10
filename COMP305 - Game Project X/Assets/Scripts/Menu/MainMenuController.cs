@@ -34,6 +34,7 @@ public class MainMenuController : MonoBehaviour
         }else if(index == 2)
         {
             //settings
+
         }else
         {
             //quit
