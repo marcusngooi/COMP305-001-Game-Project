@@ -56,11 +56,11 @@ public class PlayerMovement : MonoBehaviour
     {
         int horizontal = Mathf.Abs((int)Input.GetAxisRaw("Horizontal"));
         animator.SetInteger("Speed", horizontal);
-        if (currentState == PlayerState.isDead)
+        /*if (currentState == PlayerState.isDead)
         {
             animator.SetTrigger("Death");
             StartCoroutine(PlayerDeath());
-        }
+        }*/
         if (currentState == PlayerState.isFalling)
         {
             animator.SetBool("Falling", true);
@@ -136,7 +136,7 @@ public class PlayerMovement : MonoBehaviour
         {
             godMode = !godMode;
         }
-        if(horiz > 0)
+        if (horiz > 0 && currentState != PlayerState.isDead)
         {
             spriteRenderer.flipX = false;
         } else if(horiz < 0)
@@ -199,6 +199,7 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator PlayerDeath()
     {
+        ChangeState(PlayerState.isDead);
         animator.SetTrigger("Death");
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
         yield return new WaitForSeconds(0.9f);
