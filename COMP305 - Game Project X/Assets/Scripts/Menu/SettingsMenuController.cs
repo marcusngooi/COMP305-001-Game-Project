@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class SettingsMenuController : MonoBehaviour
 {
+    public GameObject mainMenu;
     public void SettingsMenu()
     {
         this.gameObject.SetActive(true);
-
+        this.GetComponent<Animation>().Play("settingsmenuopen");
     }
 
-    private IEnumerator StartAnimation()
+    public void StartAnimationCoroutine()
     {
-        this.GetComponent<Animation>().Play();
-        yield return new WaitForSeconds(1f);
+        StartCoroutine(CloseAnimation());
+    }
+    private IEnumerator CloseAnimation()
+    {
+        this.GetComponent<Animation>().Play("settingsmenuclose");
+        yield return new WaitForSeconds(0.9f);
+        this.gameObject.SetActive(false);
+        mainMenu.SetActive(true);
     }
 }
