@@ -9,6 +9,7 @@ public class MainMenuController : MonoBehaviour
     Animator[] animators;
     public SceneTransition transition;
     public SettingsMenuController settings;
+    public LevelMenuController level;
     public RectTransform title;
     public void ButtonPressed(int index)
     {
@@ -44,7 +45,10 @@ public class MainMenuController : MonoBehaviour
         }else if(index == 1)
         {
             //level select
-        }else if(index == 2)
+            level.LevelMenu();
+            this.gameObject.SetActive(false);
+        }
+        else if(index == 2)
         {
             //settings
             settings.SettingsMenu();
