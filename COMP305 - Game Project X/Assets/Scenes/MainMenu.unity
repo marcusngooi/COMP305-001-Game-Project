@@ -3474,7 +3474,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 180}
   m_SizeDelta: {x: 285.3037, y: 97.127}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1122607641
@@ -3718,7 +3718,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 317}
+  m_AnchoredPosition: {x: 0, y: 441}
   m_SizeDelta: {x: 285.3037, y: 97.127}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1147891192
@@ -4020,7 +4020,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -601, y: 317}
+  m_AnchoredPosition: {x: -601, y: 441}
   m_SizeDelta: {x: 285.3037, y: 97.127}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1234475317
@@ -4281,7 +4281,9 @@ Animation:
   m_Enabled: 1
   serializedVersion: 3
   m_Animation: {fileID: 0}
-  m_Animations: []
+  m_Animations:
+  - {fileID: 7400000, guid: 1eaac30457cb80f42b14be9dff6c632c, type: 2}
+  - {fileID: 7400000, guid: f1bb013030d850944b09823744ecb54c, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
@@ -4339,7 +4341,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 601, y: 317}
+  m_AnchoredPosition: {x: 601, y: 441}
   m_SizeDelta: {x: 285.3037, y: 97.127}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1320356336

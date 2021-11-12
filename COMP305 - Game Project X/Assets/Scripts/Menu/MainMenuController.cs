@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
+    Animation anim;
     Animator[] animators;
     public SceneTransition transition;
     public SettingsMenuController settings;
@@ -22,19 +23,24 @@ public class MainMenuController : MonoBehaviour
     }
     private void OnEnable()
     {
+        anim = this.GetComponent<Animation>();
         animators = GetComponentsInChildren<Animator>();
         foreach (Animator animator in animators)
         {
             animator.enabled = true;
         }
-        title.localScale = new Vector3(1,1,1);
-
+        //title.localScale = new Vector3(1,1,1);
+        anim.Play("mainmenuopen");
+    }
+    void Start()
+    {
+        
     }
 
     private IEnumerator ChangeMenu(int index)
     {
-        Animation anim = this.GetComponent<Animation>();
-        anim.Play();
+        
+        anim.Play("mainmenuclose");
         yield return new WaitForSeconds(0.90f);
 
         
