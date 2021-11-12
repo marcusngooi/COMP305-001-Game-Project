@@ -27,6 +27,10 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     public BoxCollider2D playerFeet, playerBody;
     public SpriteRenderer spriteRenderer;
+    public AudioSource audioSource;
+    public AudioClip landAudio;
+    public AudioClip jumpAudio;
+    public AudioClip eDeathAudio;
 
     void Start()
     {
@@ -115,6 +119,7 @@ public class PlayerMovement : MonoBehaviour
         //jump
         if (currentState == PlayerState.isGrounded && Input.GetButtonDown("Jump"))
         {
+            audioSource.PlayOneShot(jumpAudio);
             rb.velocity = Vector2.up * jumpVelocity;
             ChangeState(PlayerState.isJumping);
 
@@ -122,6 +127,7 @@ public class PlayerMovement : MonoBehaviour
         //double jump
         else if ((currentState == PlayerState.isFalling || currentState == PlayerState.isJumping) && Input.GetButtonDown("Jump") && jumpReady == true && jumpCharges > 0)
         {
+            audioSource.PlayOneShot(jumpAudio);
             ChangeState(PlayerState.isDblJumping);
             jumpReady = false;
             rb.velocity = new Vector2(0.0f, 0.0f);
@@ -163,6 +169,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Platform") && other.otherCollider == playerFeet)
         {
+            audioSource.PlayOneShot(landAudio);
             jump.GetComponent<Jumps>().jump = totalJumps;
             jumpCharges = totalJumps;
             ChangeState(PlayerState.isGrounded);
@@ -183,7 +190,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             other.GetComponent<EnemyMovement>().Death();
-            
+            audioSource.PlayOneShot(eDeathAudio);
             ChangeState(PlayerState.isJumping);
             rb.velocity = new Vector2(0.0f, 0.0f);
             rb.velocity = Vector2.up * jumpVelocity;
