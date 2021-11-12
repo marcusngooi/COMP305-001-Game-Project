@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class LevelMenuController : MonoBehaviour
 {
     public GameObject mainMenu;
+    public EventSystem eventSystem;
     public void LevelMenu()
     {
         this.gameObject.SetActive(true);
+        eventSystem.SetSelectedGameObject(GameObject.Find("Button"));
         this.GetComponent<Animation>().Play("levelmenuopen");
     }
 

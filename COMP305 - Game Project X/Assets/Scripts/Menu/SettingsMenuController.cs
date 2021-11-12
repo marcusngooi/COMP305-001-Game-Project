@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class SettingsMenuController : MonoBehaviour
 {
     public GameObject mainMenu;
+    public EventSystem eventSystem;
     public void SettingsMenu()
     {
         this.gameObject.SetActive(true);
+        eventSystem.SetSelectedGameObject(GameObject.Find("VolumeSlider"));
         this.GetComponent<Animation>().Play("settingsmenuopen");
     }
 
