@@ -24,9 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Game_Over.unity
     guid: dd3ec76419bcc8a4088914e6d3fd2d71
   - enabled: 0
-    path: Assets/Scenes/MainMenuOld.unity
+    path: Assets/Scenes/Test Old/MainMenuOld.unity
     guid: 39823fab6514e104b8ef840301cc1132
   - enabled: 0
-    path: Assets/Scenes/Old Menu.unity
+    path: Assets/Scenes/Test Old/Old Menu.unity
     guid: b7f8639489cf3164d9136d0cd4205ea1
   m_configObjects: {}

@@ -35,20 +35,17 @@ SpriteAtlas:
     - {fileID: 2214843187853522036, guid: 02c749f46e3010a419d11bc8f7b4e38e, type: 3}
     - {fileID: 2296283791297183335, guid: 02c749f46e3010a419d11bc8f7b4e38e, type: 3}
     - {fileID: 1608863531907894734, guid: 02c749f46e3010a419d11bc8f7b4e38e, type: 3}
-    - {fileID: 21300000, guid: 602a27c3fc4f4884caf434b7d06c311e, type: 3}
-    - {fileID: 2800000, guid: 602a27c3fc4f4884caf434b7d06c311e, type: 3}
     - {fileID: 5390129371266227295, guid: 111766a78cf2b2b4b8ea13dc3b665bb4, type: 3}
     - {fileID: 182515998739034355, guid: 111766a78cf2b2b4b8ea13dc3b665bb4, type: 3}
     - {fileID: -2642393358525368334, guid: 111766a78cf2b2b4b8ea13dc3b665bb4, type: 3}
     - {fileID: 2800000, guid: dc2b055fc565b1e45a9a65364b2e2cbd, type: 3}
     - {fileID: 2800000, guid: 1e53e00532556da44af4086e03f2ea3b, type: 3}
-    totalSpriteSurfaceArea: 144384
+    totalSpriteSurfaceArea: 62464
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
-  - {fileID: 21300000, guid: 602a27c3fc4f4884caf434b7d06c311e, type: 3}
   - {fileID: 1608863531907894734, guid: 02c749f46e3010a419d11bc8f7b4e38e, type: 3}
   - {fileID: -772813884854400687, guid: 02c749f46e3010a419d11bc8f7b4e38e, type: 3}
   - {fileID: 2214843187853522036, guid: 02c749f46e3010a419d11bc8f7b4e38e, type: 3}
@@ -66,7 +63,6 @@ SpriteAtlas:
   - {fileID: 4726436553962287433, guid: dc2b055fc565b1e45a9a65364b2e2cbd, type: 3}
   - {fileID: 9182157284707403512, guid: dc2b055fc565b1e45a9a65364b2e2cbd, type: 3}
   m_PackedSpriteNamesToIndex:
-  - tilesetOpenGameBackground
   - explosion_spritesheet_1
   - explosion_spritesheet_2
   - explosion_spritesheet_3
@@ -84,5 +80,5 @@ SpriteAtlas:
   - Untitled-1_1
   - Untitled-1_0
   m_RenderDataMap: {}
-  m_Tag: New Sprite Atlas
+  m_Tag: Atlas
   m_IsVariant: 0
