@@ -19,7 +19,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Pause
   - 
   - 
   - 
@@ -69,4 +69,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3749669957
+    locked: 0
+  - name: Pause
+    uniqueID: 1787092873
     locked: 0
