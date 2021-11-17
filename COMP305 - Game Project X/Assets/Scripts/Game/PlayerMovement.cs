@@ -32,6 +32,8 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip jumpAudio;
     public AudioClip eDeathAudio;
 
+    [SerializeField] private ParticleSystem dust;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -122,7 +124,7 @@ public class PlayerMovement : MonoBehaviour
             audioSource.PlayOneShot(jumpAudio);
             rb.velocity = Vector2.up * jumpVelocity;
             ChangeState(PlayerState.isJumping);
-
+            CreateDust();
         }
         //double jump
         else if ((currentState == PlayerState.isFalling || currentState == PlayerState.isJumping) && Input.GetButtonDown("Jump") && jumpReady == true && jumpCharges > 0)
@@ -202,6 +204,11 @@ public class PlayerMovement : MonoBehaviour
         {
             gameController.GetComponent<GameController>().calculateScore();
         }
+    }
+
+    void CreateDust()
+    {
+        dust.Play();
     }
 
     private IEnumerator PlayerDeath()
