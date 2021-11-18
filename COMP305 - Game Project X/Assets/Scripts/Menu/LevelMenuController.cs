@@ -7,6 +7,7 @@ public class LevelMenuController : MonoBehaviour
 {
     public GameObject mainMenu;
     public EventSystem eventSystem;
+    public SceneTransition transition;
     public void LevelMenu()
     {
         this.gameObject.SetActive(true);
@@ -14,15 +15,25 @@ public class LevelMenuController : MonoBehaviour
         this.GetComponent<Animation>().Play("levelmenuopen");
     }
 
+    public void LoadLevel(int level)
+    {
+        StartCoroutine(CloseAnimation(level));
+    }
     public void StartAnimationCoroutine()
     {
-        StartCoroutine(CloseAnimation());
+        StartCoroutine(CloseAnimation(0));
     }
-    private IEnumerator CloseAnimation()
+    private IEnumerator CloseAnimation(int level)
     {
         this.GetComponent<Animation>().Play("levelmenuclose");
         yield return new WaitForSeconds(0.9f);
-        this.gameObject.SetActive(false);
-        mainMenu.SetActive(true);
+        if(level != 0)
+        {
+            transition.PlayLevel(level);
+        }else
+        {
+            this.gameObject.SetActive(false);
+            mainMenu.SetActive(true);
+        }
     }
 }

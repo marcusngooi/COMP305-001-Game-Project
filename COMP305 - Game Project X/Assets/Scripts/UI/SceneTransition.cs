@@ -53,6 +53,10 @@ public class SceneTransition : MonoBehaviour
     {
         StartCoroutine(LoadLevel(1));
     }
+    public void PlayLevel(int level)
+    {
+        StartCoroutine(LoadLevel(level));
+    }
     IEnumerator LoadLevel(int levelindex)
     {
         // play the animation
