@@ -11,6 +11,8 @@ public class EnemyMovement : MonoBehaviour
     public Animator animator;
     public bool isAlive;
 
+    [SerializeField] private ParticleSystem enemyParticle;
+
 
     private void Start()
     {
@@ -41,6 +43,7 @@ public class EnemyMovement : MonoBehaviour
 
     public void Death()
     {
+
         isAlive = false;
         foreach (Collider2D c in GetComponents<Collider2D>())
         {
@@ -50,10 +53,17 @@ public class EnemyMovement : MonoBehaviour
         
     }
 
+    public void DeathEffect()
+    {
+        enemyParticle.Play();
+    }
+
+
     IEnumerator DeathAnimation()
     {
         animator.SetBool("Alive", false);
         yield return new WaitForSeconds(1f);
+        DeathEffect();
         Destroy(this.gameObject);
     }
 }

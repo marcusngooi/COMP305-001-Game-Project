@@ -34,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private ParticleSystem dust;
 
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
