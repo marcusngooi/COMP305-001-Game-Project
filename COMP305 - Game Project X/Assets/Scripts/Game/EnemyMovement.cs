@@ -62,8 +62,8 @@ public class EnemyMovement : MonoBehaviour
     IEnumerator DeathAnimation()
     {
         animator.SetBool("Alive", false);
-        yield return new WaitForSeconds(1f);
         DeathEffect();
+        yield return new WaitForSeconds(1f);
         Destroy(this.gameObject);
     }
 }
