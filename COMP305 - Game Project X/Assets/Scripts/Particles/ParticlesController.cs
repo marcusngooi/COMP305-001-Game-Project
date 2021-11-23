@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ParticlesController : MonoBehaviour
 {
-    public ParticleSystem enemyDeathParticles;
+    public ParticleSystem deathParticles;
     public ParticleSystem playerDustParticles;
     public void CreateDust()
     {
@@ -13,7 +13,7 @@ public class ParticlesController : MonoBehaviour
 
     public void DeathEffect()
     {
-        enemyDeathParticles.Play();
+        deathParticles.Play();
     }
 
 }

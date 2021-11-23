@@ -629,17 +629,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 137192695}
   m_CullTransparentMesh: 1
---- !u!114 &152742578 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1409529259916221481, guid: b68c35919c5e697488464858aa84bd4f, type: 3}
-  m_PrefabInstance: {fileID: 836771873}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bdb0ea1209ed904aa0eab6cd2128e6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &172546905
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,11 +763,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 172546905}
   m_CullTransparentMesh: 1
---- !u!198 &178595462 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 7241152554094328038, guid: b68c35919c5e697488464858aa84bd4f, type: 3}
-  m_PrefabInstance: {fileID: 1908904364}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &214924920
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4544,10 +4528,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyMovement
       objectReference: {fileID: 0}
-    - target: {fileID: 8227470834769491279, guid: b68c35919c5e697488464858aa84bd4f, type: 3}
-      propertyPath: enemyDeath
-      value: 
-      objectReference: {fileID: 152742578}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b68c35919c5e697488464858aa84bd4f, type: 3}
 --- !u!4 &836771874 stripped
@@ -4897,17 +4877,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4995652209289723696, guid: b68c35919c5e697488464858aa84bd4f, type: 3}
   m_PrefabInstance: {fileID: 956587514}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1001055859 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1001055859, guid: cdac9d964103eb7409a5164c596c0f6f, type: 3}
-  m_PrefabInstance: {fileID: 1241926918965399639}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bdb0ea1209ed904aa0eab6cd2128e6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!115 &1045930553
 MonoScript:
   m_ObjectHideFlags: 0
@@ -5119,11 +5088,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_XPosition: 0.01999664
---- !u!198 &1419808826 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 7241152554094328038, guid: b68c35919c5e697488464858aa84bd4f, type: 3}
-  m_PrefabInstance: {fileID: 836771873}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1438445933
 GameObject:
   m_ObjectHideFlags: 0
@@ -19778,7 +19742,7 @@ PrefabInstance:
     - target: {fileID: 8227470834769491279, guid: b68c35919c5e697488464858aa84bd4f, type: 3}
       propertyPath: enemyParticle
       value: 
-      objectReference: {fileID: 178595462}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b68c35919c5e697488464858aa84bd4f, type: 3}
 --- !u!1 &1951228571
@@ -20011,18 +19975,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 423339753}
     m_Modifications:
-    - target: {fileID: 1001055859, guid: cdac9d964103eb7409a5164c596c0f6f, type: 3}
-      propertyPath: enemyDeathParticles
-      value: 
-      objectReference: {fileID: 1419808826}
     - target: {fileID: 1241926918182398387, guid: cdac9d964103eb7409a5164c596c0f6f, type: 3}
       propertyPath: transition
       value: 
       objectReference: {fileID: 1504806380}
-    - target: {fileID: 1241926918182398388, guid: cdac9d964103eb7409a5164c596c0f6f, type: 3}
-      propertyPath: playerDust
-      value: 
-      objectReference: {fileID: 1001055859}
     - target: {fileID: 1241926918182398388, guid: cdac9d964103eb7409a5164c596c0f6f, type: 3}
       propertyPath: audioSource
       value: 

@@ -126,7 +126,7 @@ Transform:
   m_LocalPosition: {x: 1.3, y: -1.14, z: 1.5626309}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
-  - {fileID: 7241152554094328039}
+  - {fileID: 7442890628604595060}
   m_Father: {fileID: 4995652209289723696}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -284,9 +284,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bdb0ea1209ed904aa0eab6cd2128e6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyDeathParticles: {fileID: 7241152554094328038}
+  deathParticles: {fileID: 4360624254568523675, guid: 236570edfff48be4a9674d034e5296db, type: 3}
   playerDustParticles: {fileID: 0}
---- !u!1001 &6411350459209359229
+--- !u!1001 &6615358151204924654
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -337,19 +337,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4360624254568523675, guid: 236570edfff48be4a9674d034e5296db, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4360624254568523675, guid: 236570edfff48be4a9674d034e5296db, type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4360624254568523685, guid: 236570edfff48be4a9674d034e5296db, type: 3}
       propertyPath: m_Name
-      value: EnemyDeathParticles
+      value: DeathParticles
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 236570edfff48be4a9674d034e5296db, type: 3}
---- !u!4 &7241152554094328039 stripped
+--- !u!4 &7442890628604595060 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4360624254568523674, guid: 236570edfff48be4a9674d034e5296db, type: 3}
-  m_PrefabInstance: {fileID: 6411350459209359229}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &7241152554094328038 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 4360624254568523675, guid: 236570edfff48be4a9674d034e5296db, type: 3}
-  m_PrefabInstance: {fileID: 6411350459209359229}
+  m_PrefabInstance: {fileID: 6615358151204924654}
   m_PrefabAsset: {fileID: 0}

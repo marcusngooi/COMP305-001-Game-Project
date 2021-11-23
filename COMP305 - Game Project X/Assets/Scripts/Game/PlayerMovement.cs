@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip landAudio;
     public AudioClip jumpAudio;
     public AudioClip eDeathAudio;
-    public ParticlesController playerDust;
+    public ParticlesController playerParticles;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -121,7 +121,7 @@ public class PlayerMovement : MonoBehaviour
         if (currentState == PlayerState.isGrounded && Input.GetButtonDown("Jump"))
         {
             audioSource.PlayOneShot(jumpAudio);
-            playerDust.CreateDust();
+            playerParticles.CreateDust();
             rb.velocity = Vector2.up * jumpVelocity;
             ChangeState(PlayerState.isJumping);
         }
@@ -210,6 +210,7 @@ public class PlayerMovement : MonoBehaviour
     {
         ChangeState(PlayerState.isDead);
         animator.SetTrigger("Death");
+        playerParticles.DeathEffect();
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
         yield return new WaitForSeconds(0.9f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
