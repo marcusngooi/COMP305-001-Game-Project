@@ -10,9 +10,7 @@ public class EnemyMovement : MonoBehaviour
     public int target;
     public Animator animator;
     public bool isAlive;
-
-    [SerializeField] private ParticleSystem enemyParticle;
-
+    public ParticlesController enemyDeath;
 
     private void Start()
     {
@@ -52,17 +50,10 @@ public class EnemyMovement : MonoBehaviour
         StartCoroutine(DeathAnimation());
         
     }
-
-    public void DeathEffect()
-    {
-        enemyParticle.Play();
-    }
-
-
     IEnumerator DeathAnimation()
     {
         animator.SetBool("Alive", false);
-        DeathEffect();
+        enemyDeath.DeathEffect();
         yield return new WaitForSeconds(1f);
         Destroy(this.gameObject);
     }

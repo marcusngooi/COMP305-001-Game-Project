@@ -31,10 +31,7 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip landAudio;
     public AudioClip jumpAudio;
     public AudioClip eDeathAudio;
-
-    [SerializeField] private ParticleSystem dust;
-
-
+    public ParticlesController playerDust;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -43,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
         jumpCharges = totalJumps;
         jumpReady = true;
         StartCoroutine(DoubleJumpCooldown(jumpCooldown));
+
     }
 
     void Update()
@@ -123,9 +121,9 @@ public class PlayerMovement : MonoBehaviour
         if (currentState == PlayerState.isGrounded && Input.GetButtonDown("Jump"))
         {
             audioSource.PlayOneShot(jumpAudio);
+            playerDust.CreateDust();
             rb.velocity = Vector2.up * jumpVelocity;
             ChangeState(PlayerState.isJumping);
-            CreateDust();
         }
         //double jump
         else if ((currentState == PlayerState.isFalling || currentState == PlayerState.isJumping) && Input.GetButtonDown("Jump") && jumpReady == true && jumpCharges > 0)
@@ -207,11 +205,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void CreateDust()
-    {
-        dust.Play();
-    }
-
+   
     private IEnumerator PlayerDeath()
     {
         ChangeState(PlayerState.isDead);

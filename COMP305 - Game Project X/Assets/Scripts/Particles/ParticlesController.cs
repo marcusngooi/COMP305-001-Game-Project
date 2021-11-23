@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class ParticlesController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public ParticleSystem enemyDeathParticles;
+    public ParticleSystem playerDustParticles;
+    public void CreateDust()
     {
-        
+        playerDustParticles.Play();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void DeathEffect()
     {
-        
+        enemyDeathParticles.Play();
     }
+
 }

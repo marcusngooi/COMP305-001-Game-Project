@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 8227470834769491278}
   - component: {fileID: 8227470834769491279}
   - component: {fileID: 2503793671378202014}
+  - component: {fileID: 1409529259916221481}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -251,7 +252,7 @@ MonoBehaviour:
   target: 1
   animator: {fileID: 2503793671378202014}
   isAlive: 0
-  enemyParticle: {fileID: 4360624254568523675, guid: 236570edfff48be4a9674d034e5296db, type: 3}
+  enemyDeath: {fileID: 1409529259916221481}
 --- !u!95 &2503793671378202014
 Animator:
   serializedVersion: 3
@@ -271,6 +272,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1409529259916221481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8227470834769491276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bdb0ea1209ed904aa0eab6cd2128e6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyDeathParticles: {fileID: 7241152554094328038}
+  playerDustParticles: {fileID: 0}
 --- !u!1001 &6411350459209359229
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -331,5 +346,10 @@ PrefabInstance:
 --- !u!4 &7241152554094328039 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4360624254568523674, guid: 236570edfff48be4a9674d034e5296db, type: 3}
+  m_PrefabInstance: {fileID: 6411350459209359229}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7241152554094328038 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4360624254568523675, guid: 236570edfff48be4a9674d034e5296db, type: 3}
   m_PrefabInstance: {fileID: 6411350459209359229}
   m_PrefabAsset: {fileID: 0}
