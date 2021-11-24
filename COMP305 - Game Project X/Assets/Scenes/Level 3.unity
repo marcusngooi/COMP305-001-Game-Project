@@ -976,18 +976,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1203987901}
-    - target: {fileID: 7225175135811841378, guid: af1db19c93a826546ad1e48842ac2557, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Quit
-      objectReference: {fileID: 0}
     - target: {fileID: 7225175135858596836, guid: af1db19c93a826546ad1e48842ac2557, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1203987901}
-    - target: {fileID: 7225175135858596836, guid: af1db19c93a826546ad1e48842ac2557, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Resume
-      objectReference: {fileID: 0}
     - target: {fileID: 7225175136043629206, guid: af1db19c93a826546ad1e48842ac2557, type: 3}
       propertyPath: m_Pivot.x
       value: 0
