@@ -237,6 +237,72 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1001 &481837026
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4513047223367804936, guid: beb314e5d352f9a4fa4b9648a3fc4b59, type: 3}
+      propertyPath: m_Name
+      value: Audio
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513047223367804937, guid: beb314e5d352f9a4fa4b9648a3fc4b59, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513047223367804937, guid: beb314e5d352f9a4fa4b9648a3fc4b59, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 865.9563
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513047223367804937, guid: beb314e5d352f9a4fa4b9648a3fc4b59, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 517.6194
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513047223367804937, guid: beb314e5d352f9a4fa4b9648a3fc4b59, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -72.69589
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513047223367804937, guid: beb314e5d352f9a4fa4b9648a3fc4b59, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513047223367804937, guid: beb314e5d352f9a4fa4b9648a3fc4b59, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513047223367804937, guid: beb314e5d352f9a4fa4b9648a3fc4b59, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513047223367804937, guid: beb314e5d352f9a4fa4b9648a3fc4b59, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513047223367804937, guid: beb314e5d352f9a4fa4b9648a3fc4b59, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513047223367804937, guid: beb314e5d352f9a4fa4b9648a3fc4b59, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513047223367804937, guid: beb314e5d352f9a4fa4b9648a3fc4b59, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513047223861855715, guid: beb314e5d352f9a4fa4b9648a3fc4b59, type: 3}
+      propertyPath: m_Volume
+      value: 0.551
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: beb314e5d352f9a4fa4b9648a3fc4b59, type: 3}
+--- !u!82 &481837027 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4513047223861855715, guid: beb314e5d352f9a4fa4b9648a3fc4b59, type: 3}
+  m_PrefabInstance: {fileID: 481837026}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &527217272 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 362749460774231106, guid: 90a732693d52bca4fa6951cae5a7d427, type: 3}
@@ -3675,6 +3741,8 @@ MonoBehaviour:
   txt: {fileID: 1169165676}
   continueText: {fileID: 1532126076}
   sceneTransition: {fileID: 527217272}
+  audioSource: {fileID: 481837027}
+  typeAudio: {fileID: 8300000, guid: 9ac6ba486600e1e46b6559dfd289297d, type: 3}
 --- !u!114 &1169165676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3704,7 +3772,7 @@ MonoBehaviour:
     boost your way out of the Origins program facility. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8c54a989cb4ef764bab1e151d1ed7943, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 45e1797331505344baf7bd8fd997974b, type: 2}
+  m_sharedMaterial: {fileID: -5014304043783038488, guid: 8c54a989cb4ef764bab1e151d1ed7943, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
