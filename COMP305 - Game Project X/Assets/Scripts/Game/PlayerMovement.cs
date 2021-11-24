@@ -40,7 +40,6 @@ public class PlayerMovement : MonoBehaviour
         jumpCharges = totalJumps;
         jumpReady = true;
         StartCoroutine(DoubleJumpCooldown(jumpCooldown));
-
     }
 
     void Update()
@@ -106,6 +105,7 @@ public class PlayerMovement : MonoBehaviour
     {
         float horiz = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(horiz * speed * Time.fixedDeltaTime, rb.velocity.y);
+
         //Changes gravity so you fall faster (makes it feel less floaty when jumping)
         if (rb.velocity.y < 0)
         {
