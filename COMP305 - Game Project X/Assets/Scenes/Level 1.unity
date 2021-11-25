@@ -708,6 +708,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4743537687354253929, guid: 513b97c153b72c344b6f6e6b83c4a8a7, type: 3}
   m_PrefabInstance: {fileID: 160244411}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &213507738 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7442890628604595061, guid: b68c35919c5e697488464858aa84bd4f, type: 3}
+  m_PrefabInstance: {fileID: 956587514}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &214924920
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -715,6 +720,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1150691286}
     m_Modifications:
+    - target: {fileID: 1409529259916221481, guid: b68c35919c5e697488464858aa84bd4f, type: 3}
+      propertyPath: deathParticles
+      value: 
+      objectReference: {fileID: 554155837}
     - target: {fileID: 1409529259916221481, guid: b68c35919c5e697488464858aa84bd4f, type: 3}
       propertyPath: playerDustParticles
       value: 
@@ -1376,6 +1385,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1150691286}
     m_Modifications:
     - target: {fileID: 1409529259916221481, guid: b68c35919c5e697488464858aa84bd4f, type: 3}
+      propertyPath: deathParticles
+      value: 
+      objectReference: {fileID: 1330575423}
+    - target: {fileID: 1409529259916221481, guid: b68c35919c5e697488464858aa84bd4f, type: 3}
       propertyPath: playerDustParticles
       value: 
       objectReference: {fileID: 2093694789}
@@ -1465,6 +1478,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1150691286}
     m_Modifications:
+    - target: {fileID: 1409529259916221481, guid: b68c35919c5e697488464858aa84bd4f, type: 3}
+      propertyPath: deathParticles
+      value: 
+      objectReference: {fileID: 1205394354}
     - target: {fileID: 1409529259916221481, guid: b68c35919c5e697488464858aa84bd4f, type: 3}
       propertyPath: playerDustParticles
       value: 
@@ -3653,6 +3670,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!198 &554155837 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7442890628604595061, guid: b68c35919c5e697488464858aa84bd4f, type: 3}
+  m_PrefabInstance: {fileID: 214924920}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &556671057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4581,6 +4603,11 @@ Transform:
   m_Father: {fileID: 614448298}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!198 &737448326 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7442890628604595061, guid: b68c35919c5e697488464858aa84bd4f, type: 3}
+  m_PrefabInstance: {fileID: 1536221540}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &836771873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4712,6 +4739,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3983678775051263602, guid: 81a3313ecab15c34c8186e8a6141e6c2, type: 3}
   m_PrefabInstance: {fileID: 882608512}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &890515510 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7442890628604595061, guid: b68c35919c5e697488464858aa84bd4f, type: 3}
+  m_PrefabInstance: {fileID: 1908904364}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &896710217
 GameObject:
@@ -4911,6 +4943,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1150691286}
     m_Modifications:
     - target: {fileID: 1409529259916221481, guid: b68c35919c5e697488464858aa84bd4f, type: 3}
+      propertyPath: deathParticles
+      value: 
+      objectReference: {fileID: 213507738}
+    - target: {fileID: 1409529259916221481, guid: b68c35919c5e697488464858aa84bd4f, type: 3}
       propertyPath: playerDustParticles
       value: 
       objectReference: {fileID: 2093694789}
@@ -5103,6 +5139,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1770616568}
+--- !u!198 &1205394354 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7442890628604595061, guid: b68c35919c5e697488464858aa84bd4f, type: 3}
+  m_PrefabInstance: {fileID: 453581991}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1235248232
 GameObject:
   m_ObjectHideFlags: 0
@@ -5190,6 +5231,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4995652209289723696, guid: b68c35919c5e697488464858aa84bd4f, type: 3}
   m_PrefabInstance: {fileID: 1908904364}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1330575423 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7442890628604595061, guid: b68c35919c5e697488464858aa84bd4f, type: 3}
+  m_PrefabInstance: {fileID: 426788433}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1387035106 stripped
 Transform:
@@ -5519,6 +5565,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1150691286}
     m_Modifications:
+    - target: {fileID: 1409529259916221481, guid: b68c35919c5e697488464858aa84bd4f, type: 3}
+      propertyPath: deathParticles
+      value: 
+      objectReference: {fileID: 737448326}
     - target: {fileID: 1409529259916221481, guid: b68c35919c5e697488464858aa84bd4f, type: 3}
       propertyPath: playerDustParticles
       value: 
@@ -19438,6 +19488,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1150691286}
     m_Modifications:
+    - target: {fileID: 1409529259916221481, guid: b68c35919c5e697488464858aa84bd4f, type: 3}
+      propertyPath: deathParticles
+      value: 
+      objectReference: {fileID: 890515510}
     - target: {fileID: 1409529259916221481, guid: b68c35919c5e697488464858aa84bd4f, type: 3}
       propertyPath: playerDustParticles
       value: 

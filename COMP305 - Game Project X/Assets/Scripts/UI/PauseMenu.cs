@@ -32,7 +32,7 @@ public class PauseMenu : MonoBehaviour
     public void Quit()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Game_Over");
+        SceneManager.LoadScene("MainMenu");
     }
 
 }
