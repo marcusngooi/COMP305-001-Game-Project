@@ -697,6 +697,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4743537687354253930, guid: 513b97c153b72c344b6f6e6b83c4a8a7, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4743537687354253932, guid: 513b97c153b72c344b6f6e6b83c4a8a7, type: 3}
       propertyPath: m_Name
       value: AirSuckedParticles (5)
@@ -1183,6 +1187,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4743537687354253930, guid: 513b97c153b72c344b6f6e6b83c4a8a7, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4743537687354253932, guid: 513b97c153b72c344b6f6e6b83c4a8a7, type: 3}
       propertyPath: m_Name
       value: AirSuckedParticles (10)
@@ -1628,6 +1636,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4743537687354253930, guid: 513b97c153b72c344b6f6e6b83c4a8a7, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4743537687354253932, guid: 513b97c153b72c344b6f6e6b83c4a8a7, type: 3}
       propertyPath: m_Name
       value: AirSuckedParticles
@@ -1701,6 +1713,10 @@ PrefabInstance:
     - target: {fileID: 4743537687354253929, guid: 513b97c153b72c344b6f6e6b83c4a8a7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4743537687354253930, guid: 513b97c153b72c344b6f6e6b83c4a8a7, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4743537687354253932, guid: 513b97c153b72c344b6f6e6b83c4a8a7, type: 3}
       propertyPath: m_Name
@@ -3738,6 +3754,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4743537687354253930, guid: 513b97c153b72c344b6f6e6b83c4a8a7, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4743537687354253932, guid: 513b97c153b72c344b6f6e6b83c4a8a7, type: 3}
       propertyPath: m_Name
       value: AirSuckedParticles (6)
@@ -5394,6 +5414,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4743537687354253930, guid: 513b97c153b72c344b6f6e6b83c4a8a7, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4743537687354253932, guid: 513b97c153b72c344b6f6e6b83c4a8a7, type: 3}
       propertyPath: m_Name
       value: AirSuckedParticles (9)
@@ -5467,6 +5491,10 @@ PrefabInstance:
     - target: {fileID: 4743537687354253929, guid: 513b97c153b72c344b6f6e6b83c4a8a7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4743537687354253930, guid: 513b97c153b72c344b6f6e6b83c4a8a7, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4743537687354253932, guid: 513b97c153b72c344b6f6e6b83c4a8a7, type: 3}
       propertyPath: m_Name
@@ -5546,6 +5574,10 @@ PrefabInstance:
     - target: {fileID: 4743537687354253929, guid: 513b97c153b72c344b6f6e6b83c4a8a7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4743537687354253930, guid: 513b97c153b72c344b6f6e6b83c4a8a7, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4743537687354253932, guid: 513b97c153b72c344b6f6e6b83c4a8a7, type: 3}
       propertyPath: m_Name
@@ -19870,6 +19902,10 @@ PrefabInstance:
     - target: {fileID: 4743537687354253929, guid: 513b97c153b72c344b6f6e6b83c4a8a7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4743537687354253930, guid: 513b97c153b72c344b6f6e6b83c4a8a7, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4743537687354253932, guid: 513b97c153b72c344b6f6e6b83c4a8a7, type: 3}
       propertyPath: m_Name
