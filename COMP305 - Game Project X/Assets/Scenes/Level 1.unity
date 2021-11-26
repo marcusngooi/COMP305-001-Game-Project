@@ -19987,10 +19987,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 423339753}
     m_Modifications:
-    - target: {fileID: 2093694786, guid: cdac9d964103eb7409a5164c596c0f6f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1241926918182398387, guid: cdac9d964103eb7409a5164c596c0f6f, type: 3}
       propertyPath: transition
       value: 
@@ -20009,7 +20005,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1241926918182398389, guid: cdac9d964103eb7409a5164c596c0f6f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.17
+      value: -9.001
       objectReference: {fileID: 0}
     - target: {fileID: 1241926918182398389, guid: cdac9d964103eb7409a5164c596c0f6f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -20050,10 +20046,6 @@ PrefabInstance:
     - target: {fileID: 1241926918182398391, guid: cdac9d964103eb7409a5164c596c0f6f, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 5574705517671020966, guid: cdac9d964103eb7409a5164c596c0f6f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdac9d964103eb7409a5164c596c0f6f, type: 3}
