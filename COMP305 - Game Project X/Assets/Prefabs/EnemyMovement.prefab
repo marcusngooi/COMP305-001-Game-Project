@@ -103,11 +103,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5379779465225055918}
   - component: {fileID: 8227470834769491264}
-  - component: {fileID: 8227470834769491265}
-  - component: {fileID: 8227470834769491278}
   - component: {fileID: 8227470834769491279}
   - component: {fileID: 2503793671378202014}
   - component: {fileID: 1409529259916221481}
+  - component: {fileID: 2623711847725580233}
+  - component: {fileID: 2121475516879607866}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -181,58 +181,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8227470834769491265
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8227470834769491276}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.04517597, y: 0.49563077}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.1666666, y: 1.375}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.96879923, y: 0.15143567}
-  m_EdgeRadius: 0
---- !u!61 &8227470834769491278
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8227470834769491276}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: dd195e8a96ebadf44ac93d0e080023f3, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.046990395, y: 0.10316415}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.1666666, y: 1.375}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.5065417, y: 0.47167453}
-  m_EdgeRadius: 0
 --- !u!114 &8227470834769491279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,6 +234,60 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathParticles: {fileID: 4360624254568523675, guid: 236570edfff48be4a9674d034e5296db, type: 3}
   playerDustParticles: {fileID: 0}
+--- !u!68 &2623711847725580233
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8227470834769491276}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.37454396, y: 0.23778713}
+  - {x: -0.3750565, y: 0.3159616}
+  - {x: 0.028203249, y: 0.5815263}
+  - {x: 0.4190154, y: 0.30898404}
+  - {x: 0.41885453, y: 0.23484945}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!68 &2121475516879607866
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8227470834769491276}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.41224223, y: 0.17399096}
+  - {x: -0.27851915, y: -0.16135907}
+  - {x: -0.07017779, y: -0.35695004}
+  - {x: -0.055019617, y: -0.36828065}
+  - {x: 0.17139101, y: -0.36745572}
+  - {x: 0.31060386, y: -0.23646975}
+  - {x: 0.3936622, y: -0.024900675}
+  - {x: 0.3939898, y: -0.02406621}
+  - {x: 0.46733958, y: 0.17979074}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1001 &6615358151204924654
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -348,6 +350,10 @@ PrefabInstance:
     - target: {fileID: 4360624254568523685, guid: 236570edfff48be4a9674d034e5296db, type: 3}
       propertyPath: m_Name
       value: DeathParticles
+      objectReference: {fileID: 0}
+    - target: {fileID: 4360624254568523685, guid: 236570edfff48be4a9674d034e5296db, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 236570edfff48be4a9674d034e5296db, type: 3}
