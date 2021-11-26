@@ -31,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip landAudio;
     public AudioClip jumpAudio;
     public AudioClip eDeathAudio;
+    public AudioClip playerDeathAudio;
     public ParticlesController playerParticles;
     void Start()
     {
@@ -209,6 +210,13 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator PlayerDeath()
     {
         ChangeState(PlayerState.isDead);
+        var collidersObj = gameObject.GetComponentsInChildren<Collider2D>();
+        for (var index = 0; index < collidersObj.Length; index++)
+        {
+            var colliderItem = collidersObj[index];
+            colliderItem.enabled = false;
+        }
+        audioSource.PlayOneShot(playerDeathAudio);
         animator.SetTrigger("Death");
         playerParticles.DeathEffect();
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
