@@ -1346,6 +1346,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90a732693d52bca4fa6951cae5a7d427, type: 3}
+--- !u!1 &414667327 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7407470394853570545, guid: af1db19c93a826546ad1e48842ac2557, type: 3}
+  m_PrefabInstance: {fileID: 7225175134273014895}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &423339752
 GameObject:
   m_ObjectHideFlags: 0
@@ -3686,6 +3691,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &550179499 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4513047223861855713, guid: beb314e5d352f9a4fa4b9648a3fc4b59, type: 3}
+  m_PrefabInstance: {fileID: 4513047222211923452}
+  m_PrefabAsset: {fileID: 0}
 --- !u!198 &554155837 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 7442890628604595061, guid: b68c35919c5e697488464858aa84bd4f, type: 3}
@@ -5120,7 +5130,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1203987900}
-  - component: {fileID: 1203987901}
   m_Layer: 0
   m_Name: GameCanvases
   m_TagString: Untagged
@@ -5146,19 +5155,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1203987901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1203987899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 455368344c2bc684cbf6e292f840dce7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 1770616568}
 --- !u!198 &1205394354 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 7442890628604595061, guid: b68c35919c5e697488464858aa84bd4f, type: 3}
@@ -18815,11 +18811,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4725075780517994170, guid: 7110f40d19610904aa1e2e55b30f163e, type: 3}
   m_PrefabInstance: {fileID: 6807539}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1770616568 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7225175136043629207, guid: af1db19c93a826546ad1e48842ac2557, type: 3}
-  m_PrefabInstance: {fileID: 7225175134273014895}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1770616569 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7225175136043629206, guid: af1db19c93a826546ad1e48842ac2557, type: 3}
@@ -19950,7 +19941,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2116795884}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Script: {fileID: 11500000, guid: 669878dbf5e62464dbacf010f77d5d8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_HorizontalAxis: Horizontal
@@ -19972,7 +19963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 414667327}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &2116795887
@@ -20545,14 +20536,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1203987900}
     m_Modifications:
-    - target: {fileID: 7225175135811841378, guid: af1db19c93a826546ad1e48842ac2557, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+    - target: {fileID: 3859725870233437573, guid: af1db19c93a826546ad1e48842ac2557, type: 3}
+      propertyPath: obj
       value: 
-      objectReference: {fileID: 1203987901}
-    - target: {fileID: 7225175135858596836, guid: af1db19c93a826546ad1e48842ac2557, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1203987901}
+      objectReference: {fileID: 550179499}
     - target: {fileID: 7225175136043629203, guid: af1db19c93a826546ad1e48842ac2557, type: 3}
       propertyPath: m_Camera
       value: 
@@ -20645,5 +20632,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7788884986482645300, guid: af1db19c93a826546ad1e48842ac2557, type: 3}
+      propertyPath: obj
+      value: 
+      objectReference: {fileID: 550179499}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af1db19c93a826546ad1e48842ac2557, type: 3}
