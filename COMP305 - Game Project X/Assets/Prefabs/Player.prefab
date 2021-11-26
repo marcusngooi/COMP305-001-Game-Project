@@ -4848,8 +4848,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01087296, y: -0.59363145}
-  m_Size: {x: 0.27819145, y: 0.62270105}
+  m_Offset: {x: -0.01087296, y: -0.5615773}
+  m_Size: {x: 0.27819145, y: 0.58300495}
   m_Direction: 0
 --- !u!1 &1241926917588602051
 GameObject:
@@ -4860,7 +4860,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1241926917588602050}
-  - component: {fileID: 4996100190263609178}
+  - component: {fileID: 2076127882599237899}
   m_Layer: 0
   m_Name: Feet
   m_TagString: Untagged
@@ -4882,8 +4882,8 @@ Transform:
   m_Father: {fileID: 1241926918182398389}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &4996100190263609178
-CapsuleCollider2D:
+--- !u!61 &2076127882599237899
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4895,9 +4895,19 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.03724169, y: -1.0299976}
-  m_Size: {x: 0.27641687, y: 0.13649012}
-  m_Direction: 1
+  m_Offset: {x: -0.037646294, y: -1.0374212}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.27404785, y: 0.121313095}
+  m_EdgeRadius: 0
 --- !u!1 &1241926918182398391
 GameObject:
   m_ObjectHideFlags: 0
@@ -5034,8 +5044,8 @@ MonoBehaviour:
   jumpReady: 0
   godMode: 0
   animator: {fileID: 1241926918182398385}
-  playerFeet: {fileID: 4996100190263609178}
   playerBody: {fileID: 3026244011486421051}
+  playerFeet: {fileID: 2076127882599237899}
   spriteRenderer: {fileID: 0}
   audioSource: {fileID: 0}
   landAudio: {fileID: 8300000, guid: 11cffc9fbad96d54b88d2cc198effa3b, type: 3}

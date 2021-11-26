@@ -25,7 +25,8 @@ public class PlayerMovement : MonoBehaviour
     public int jumpCharges, totalJumps = 3, maxSpeed = 8;
     public bool jumpReady, godMode;
     public Animator animator;
-    public CapsuleCollider2D playerFeet, playerBody;
+    public CapsuleCollider2D playerBody;
+    public BoxCollider2D playerFeet;
     public SpriteRenderer spriteRenderer;
     public AudioSource audioSource;
     public AudioClip landAudio;

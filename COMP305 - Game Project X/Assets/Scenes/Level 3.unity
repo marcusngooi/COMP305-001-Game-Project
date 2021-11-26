@@ -7618,10 +7618,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 423339753}
     m_Modifications:
-    - target: {fileID: 2093694786, guid: cdac9d964103eb7409a5164c596c0f6f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1241926918182398387, guid: cdac9d964103eb7409a5164c596c0f6f, type: 3}
       propertyPath: transition
       value: 
@@ -7682,44 +7678,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 3026244011486421051, guid: cdac9d964103eb7409a5164c596c0f6f, type: 3}
-      propertyPath: m_Size.x
-      value: 0.27819145
-      objectReference: {fileID: 0}
-    - target: {fileID: 3026244011486421051, guid: cdac9d964103eb7409a5164c596c0f6f, type: 3}
-      propertyPath: m_Size.y
-      value: 0.58300495
-      objectReference: {fileID: 0}
-    - target: {fileID: 3026244011486421051, guid: cdac9d964103eb7409a5164c596c0f6f, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.01087296
-      objectReference: {fileID: 0}
-    - target: {fileID: 3026244011486421051, guid: cdac9d964103eb7409a5164c596c0f6f, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.5615773
-      objectReference: {fileID: 0}
-    - target: {fileID: 5574705517671020966, guid: cdac9d964103eb7409a5164c596c0f6f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8912655264333806562, guid: cdac9d964103eb7409a5164c596c0f6f, type: 3}
-      propertyPath: m_Size.x
-      value: 0.27845502
-      objectReference: {fileID: 0}
-    - target: {fileID: 8912655264333806562, guid: cdac9d964103eb7409a5164c596c0f6f, type: 3}
-      propertyPath: m_Size.y
-      value: 0.07781983
-      objectReference: {fileID: 0}
-    - target: {fileID: 8912655264333806562, guid: cdac9d964103eb7409a5164c596c0f6f, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.032911222
-      objectReference: {fileID: 0}
-    - target: {fileID: 8912655264333806562, guid: cdac9d964103eb7409a5164c596c0f6f, type: 3}
-      propertyPath: m_Offset.y
-      value: -1.07
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdac9d964103eb7409a5164c596c0f6f, type: 3}
 --- !u!4 &615349122 stripped
 Transform:
