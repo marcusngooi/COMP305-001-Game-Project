@@ -5041,6 +5041,7 @@ MonoBehaviour:
   landAudio: {fileID: 8300000, guid: 11cffc9fbad96d54b88d2cc198effa3b, type: 3}
   jumpAudio: {fileID: 8300000, guid: a5ad3aa59c096b44288531a2cc2a1b78, type: 3}
   eDeathAudio: {fileID: 8300000, guid: 97d381ab1b54d8c41b62abf1a10212a1, type: 3}
+  playerDeathAudio: {fileID: 8300000, guid: c3d34969b74d5fb43bb1fcc4ba307808, type: 3}
   playerParticles: {fileID: 1001055859}
 --- !u!95 &1241926918182398385
 Animator:
