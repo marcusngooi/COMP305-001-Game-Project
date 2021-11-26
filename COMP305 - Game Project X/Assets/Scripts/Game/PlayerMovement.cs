@@ -40,10 +40,10 @@ public class PlayerMovement : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         currentState = PlayerState.isGrounded;
         jumpCharges = totalJumps;
+        jump.GetComponent<Jumps>().jump = totalJumps;
         jumpReady = true;
         StartCoroutine(DoubleJumpCooldown(jumpCooldown));
     }
-
     void Update()
     {
         Movement();
