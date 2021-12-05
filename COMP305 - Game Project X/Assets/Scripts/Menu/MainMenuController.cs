@@ -47,7 +47,7 @@ public class MainMenuController : MonoBehaviour
         if(index == 0)
         {
             //play
-            transition.PlayGame();
+            transition.LoadNextLevel();
         }else if(index == 1)
         {
             //level select

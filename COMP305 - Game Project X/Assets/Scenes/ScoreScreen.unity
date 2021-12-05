@@ -1899,6 +1899,7 @@ MonoBehaviour:
   killedText: {fileID: 1893442110}
   timeText: {fileID: 1895911355}
   scoreText: {fileID: 70682648}
+  lvlCompleteText: {fileID: 2083490103}
 --- !u!1 &1601938088
 GameObject:
   m_ObjectHideFlags: 0
