@@ -19597,6 +19597,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b68c35919c5e697488464858aa84bd4f, type: 3}
+--- !u!1 &1912929142 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7225175135574621442, guid: af1db19c93a826546ad1e48842ac2557, type: 3}
+  m_PrefabInstance: {fileID: 7225175134273014895}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1951228571
 GameObject:
   m_ObjectHideFlags: 0
@@ -19995,6 +20000,10 @@ PrefabInstance:
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 1851263007}
+    - target: {fileID: 1241926918182398388, guid: cdac9d964103eb7409a5164c596c0f6f, type: 3}
+      propertyPath: pauseCanvas
+      value: 
+      objectReference: {fileID: 1912929142}
     - target: {fileID: 1241926918182398388, guid: cdac9d964103eb7409a5164c596c0f6f, type: 3}
       propertyPath: gameController
       value: 

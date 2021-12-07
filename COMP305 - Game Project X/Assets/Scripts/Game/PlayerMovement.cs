@@ -34,6 +34,9 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip eDeathAudio;
     public AudioClip playerDeathAudio;
     public ParticlesController playerParticles;
+
+    [SerializeField] private GameObject pauseCanvas;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -145,13 +148,14 @@ public class PlayerMovement : MonoBehaviour
         {
             godMode = !godMode;
         }*/
-        if (horiz > 0 && currentState != PlayerState.isDead)
+        if (horiz > 0 && currentState != PlayerState.isDead && pauseCanvas.activeInHierarchy == false)
         {
             spriteRenderer.flipX = false;
-        } else if(horiz < 0)
+        } else if(horiz < 0 && pauseCanvas.activeInHierarchy == false)
         {
             spriteRenderer.flipX = true;
         }
+
     }
     private IEnumerator DoubleJumpCooldown(float jumpCooldown)
     {
