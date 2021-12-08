@@ -56,7 +56,7 @@ public class OpeningController : MonoBehaviour
     {
         if(textDone && Input.anyKeyDown)
         {
-            sceneTransition.PlayLevel(2);
+            sceneTransition.PlayLevel("Level 1");
         }
         if(textDone == false && Input.anyKeyDown && skipText == false)
         {

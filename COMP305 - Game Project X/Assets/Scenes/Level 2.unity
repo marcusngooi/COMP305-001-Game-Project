@@ -5086,6 +5086,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 964793997}
     - target: {fileID: 1241926918182398388, guid: cdac9d964103eb7409a5164c596c0f6f, type: 3}
+      propertyPath: pauseCanvas
+      value: 
+      objectReference: {fileID: 871145748}
+    - target: {fileID: 1241926918182398388, guid: cdac9d964103eb7409a5164c596c0f6f, type: 3}
       propertyPath: gameController
       value: 
       objectReference: {fileID: 7519159400867067071}

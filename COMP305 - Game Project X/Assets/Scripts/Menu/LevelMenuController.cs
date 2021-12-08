@@ -15,19 +15,19 @@ public class LevelMenuController : MonoBehaviour
         this.GetComponent<Animation>().Play("levelmenuopen");
     }
 
-    public void LoadLevel(int level)
+    public void LoadLevel(string level)
     {
         StartCoroutine(CloseAnimation(level));
     }
     public void StartAnimationCoroutine()
     {
-        StartCoroutine(CloseAnimation(0));
+        StartCoroutine(CloseAnimation(""));
     }
-    private IEnumerator CloseAnimation(int level)
+    private IEnumerator CloseAnimation(string level)
     {
         this.GetComponent<Animation>().Play("levelmenuclose");
         yield return new WaitForSeconds(0.9f);
-        if(level != 0)
+        if(level != "")
         {
             transition.PlayLevel(level);
         }else

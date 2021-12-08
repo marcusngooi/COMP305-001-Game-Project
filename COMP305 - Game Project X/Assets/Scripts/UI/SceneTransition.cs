@@ -34,8 +34,8 @@ public class SceneTransition : MonoBehaviour
     public void LoadNextLevel()
     {
         // take the current scene and go on next scene based on build's scene order
-       
-        StartCoroutine(LoadLevel(PlayerPrefs.GetInt("scene")+1)); 
+        GlobalVariables.currentLevel += 1;
+        StartCoroutine(LoadLevel("Level " + GlobalVariables.currentLevel)); 
     } 
 
     // for main menu
@@ -46,18 +46,18 @@ public class SceneTransition : MonoBehaviour
 
     public void LoadGameOver()
     {
-        PlayerPrefs.SetInt("scene", 0);
         SceneManager.LoadScene("Game_Over");
     }
     public void PlayGame()
     {
-        StartCoroutine(LoadLevel(1));
+        GlobalVariables.currentLevel = 1;
+        StartCoroutine(LoadLevel("Opening"));
     }
-    public void PlayLevel(int level)
+    public void PlayLevel(string level)
     {
         StartCoroutine(LoadLevel(level));
     }
-    IEnumerator LoadLevel(int levelindex)
+    IEnumerator LoadLevel(string levelindex)
     {
         // play the animation
         transition.SetTrigger("Start");

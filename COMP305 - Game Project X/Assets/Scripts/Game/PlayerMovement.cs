@@ -144,10 +144,10 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, -maxSpeed);
         }
-        /*if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
             godMode = !godMode;
-        }*/
+        }
         if (horiz > 0 && currentState != PlayerState.isDead && pauseCanvas.activeInHierarchy == false)
         {
             spriteRenderer.flipX = false;
