@@ -112,7 +112,7 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(horiz * speed * Time.fixedDeltaTime, rb.velocity.y);
 
         //Changes gravity so you fall faster (makes it feel less floaty when jumping)
-        if (rb.velocity.y < 0)
+        if (rb.velocity.y <-1.5)
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
             ChangeState(PlayerState.isFalling);
@@ -131,7 +131,7 @@ public class PlayerMovement : MonoBehaviour
             ChangeState(PlayerState.isJumping);
         }
         //double jump
-        else if ((currentState == PlayerState.isFalling || currentState == PlayerState.isJumping) && Input.GetButtonDown("Jump") && jumpReady == true && jumpCharges > 0)
+        else if ((rb.velocity.y <-0.5 || currentState == PlayerState.isJumping) && Input.GetButtonDown("Jump") && jumpReady == true && jumpCharges > 0)
         {
             audioSource.PlayOneShot(jumpAudio);
             ChangeState(PlayerState.isDblJumping);
