@@ -1388,7 +1388,7 @@ Transform:
   - {fileID: 1076941498}
   - {fileID: 264142677}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &426788433
 PrefabInstance:
@@ -5432,7 +5432,7 @@ Transform:
   - {fileID: 1951228572}
   - {fileID: 1770616569}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &1205394354 stripped
 ParticleSystem:
@@ -21835,7 +21835,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1241926918965399639
 PrefabInstance:
@@ -21993,7 +21993,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4513047223367804937, guid: beb314e5d352f9a4fa4b9648a3fc4b59, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4513047223367804937, guid: beb314e5d352f9a4fa4b9648a3fc4b59, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22389,6 +22389,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1203987900}
     m_Modifications:
+    - target: {fileID: 2489890441818380065, guid: af1db19c93a826546ad1e48842ac2557, type: 3}
+      propertyPath: eventSystem
+      value: 
+      objectReference: {fileID: 2116795886}
     - target: {fileID: 3859725870233437573, guid: af1db19c93a826546ad1e48842ac2557, type: 3}
       propertyPath: obj
       value: 

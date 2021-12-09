@@ -1121,6 +1121,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1203987900}
     m_Modifications:
+    - target: {fileID: 2489890441818380065, guid: af1db19c93a826546ad1e48842ac2557, type: 3}
+      propertyPath: eventSystem
+      value: 
+      objectReference: {fileID: 2116795886}
     - target: {fileID: 7225175135811841378, guid: af1db19c93a826546ad1e48842ac2557, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -11676,6 +11680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1154080550}
+  eventSystem: {fileID: 0}
 --- !u!1001 &1207400413
 PrefabInstance:
   m_ObjectHideFlags: 0

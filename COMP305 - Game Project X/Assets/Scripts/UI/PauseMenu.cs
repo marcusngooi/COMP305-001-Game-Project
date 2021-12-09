@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private EventSystem eventSystem;
     private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Escape))
@@ -16,9 +18,10 @@ public class PauseMenu : MonoBehaviour
             }
         }
     public void Pause()
-    {        
-       pauseMenu.SetActive(true);
-       Time.timeScale = 0f;
+    {
+        pauseMenu.SetActive(true);
+        eventSystem.SetSelectedGameObject(GameObject.Find("Button"));
+        Time.timeScale = 0f;
     }
 
     
