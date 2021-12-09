@@ -1727,7 +1727,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 332559008}
         m_TargetAssemblyTypeName: SceneTransition, Assembly-CSharp
-        m_MethodName: LoadNextLevel
+        m_MethodName: LoadMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2276,7 +2276,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 332559008}
         m_TargetAssemblyTypeName: SceneTransition, Assembly-CSharp
-        m_MethodName: LoadGameOver
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

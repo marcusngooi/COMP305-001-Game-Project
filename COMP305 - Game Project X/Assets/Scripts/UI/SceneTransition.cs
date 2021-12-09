@@ -30,7 +30,7 @@ public class SceneTransition : MonoBehaviour
     {
         
         PlayerPrefs.SetInt("scene", SceneManager.GetActiveScene().buildIndex);
-        if(PlayerPrefs.GetInt("scene") == 5)
+        if(PlayerPrefs.GetInt("scene") == 4)
         {
             SceneManager.LoadScene("Ending");
         }else
@@ -73,5 +73,9 @@ public class SceneTransition : MonoBehaviour
 
         // load scene
         SceneManager.LoadScene(levelindex);
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
