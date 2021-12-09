@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class LaserMover : MonoBehaviour
 {
-    public float speed;
-    
+    [SerializeField] private float speed;
 
     // Start is called before the first frame update
     void Start()
@@ -19,11 +18,6 @@ public class LaserMover : MonoBehaviour
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(-speed, 0.0f);
         }
-    }
-
-    void Update()
-    {        
-        
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
