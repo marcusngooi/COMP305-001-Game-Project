@@ -28,8 +28,15 @@ public class SceneTransition : MonoBehaviour
 
     public void LoadScoreScreen()
     {
+        
         PlayerPrefs.SetInt("scene", SceneManager.GetActiveScene().buildIndex);
-        SceneManager.LoadScene("ScoreScreen");
+        if(PlayerPrefs.GetInt("scene") == 5)
+        {
+            SceneManager.LoadScene("Ending");
+        }else
+        {
+            SceneManager.LoadScene("ScoreScreen");
+        } 
     }
     public void LoadNextLevel()
     {
